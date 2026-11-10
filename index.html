@@ -542,6 +542,157 @@ ol.adv{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .lock-card{grid-template-columns:minmax(0,1fr)}
 .lock-card .lock-in{width:100%;min-width:0}
 
+/* ================================================================ Trainingslager · Ferien · Kosten */
+.tabbar .wrap{grid-template-columns:repeat(8,1fr)}
+@media (max-width:420px){ .tab{font-size:10px;letter-spacing:-.1px} .tab svg{width:22px;height:22px} }
+.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+.linkbtn{appearance:none;border:0;background:none;padding:0;color:var(--link);font:inherit;font-weight:600;text-decoration:underline;cursor:pointer;text-align:left}
+.warnline{margin:6px 0 0;font-size:13px;font-weight:600;color:var(--open-ink)}
+.badge.ok{background:var(--paid-bg);color:var(--paid-ink)}
+.tiny{font-size:11.5px}
+.navcard{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--ink);padding:13px 16px}
+.navcard .badge{align-self:flex-start;margin-bottom:2px}
+.navcard b{font-size:16px}
+
+/* Zonen & Regeln */
+.zcard summary{cursor:pointer;list-style:none}
+.zcard summary::-webkit-details-marker{display:none}
+.zcard[open] summary{margin-bottom:10px}
+.zt{width:100%;border-collapse:collapse;font-size:12.5px}
+.zt th{text-align:left;padding:5px 6px 5px 0;font-weight:600;color:var(--ink-2)}
+.zt td{padding:5px 3px;border-left:1px solid var(--line);text-align:center;line-height:1.25}
+.zt td b{display:block;font-size:11px;color:var(--ink-2)}
+.rules h2{font-size:16px;margin-bottom:6px}
+
+/* Wochenblöcke */
+.trb{display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--rc)}
+.trb-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.trb-h h2{margin:0;font-size:18px}
+.trb-sum{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.trb-sum b{font-size:22px;font-family:var(--font-display);line-height:1.1}
+.tsps{display:flex;flex-wrap:wrap;gap:6px}
+.tsp{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;background:var(--surface-2);border-radius:999px;padding:3px 10px 3px 8px}
+.tsp i{width:8px;height:8px;border-radius:50%;background:var(--sc)}
+.tsp.hard i{background:var(--open-ink)}
+.trd{border-top:1px solid var(--line);padding-top:8px}
+.trd-h{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.trd-h .wd{font-weight:700;color:var(--rc);min-width:58px}
+.trd-empty{margin:0 0 4px 66px}
+.trs{appearance:none;width:100%;display:flex;align-items:stretch;gap:10px;background:none;border:0;border-radius:var(--r-sm);padding:7px 4px;text-align:left;color:var(--ink);font:inherit;cursor:pointer;min-height:48px}
+.trs:hover{background:var(--surface-2)}
+.trs .bar-s{width:4px;border-radius:3px;background:var(--sc);flex:none}
+.trs-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.trs-t b{font-weight:600;font-size:14.5px}
+.trs-r{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:none}
+.trs.is-skip .trs-t{opacity:.55;text-decoration:line-through}
+.trs.is-done .bar-s{background:var(--paid-ink)}
+.ld{font-style:normal;font-size:11px;font-weight:700;border-radius:6px;padding:1px 6px;background:var(--surface-2);color:var(--ink-2)}
+.ld-mittel{background:var(--res-bg);color:var(--res-ink)}
+.ld-hart{background:var(--open-bg);color:var(--open-ink)}
+.ld-opt{background:transparent;border:1px dashed var(--line)}
+.ld-skip{background:var(--ink-2);color:var(--surface)}
+.ld-done{background:var(--paid-bg);color:var(--paid-ink)}
+
+/* Detail-Sheet */
+.kvs{display:grid;gap:6px;margin:4px 0 10px}
+.kv{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;font-size:14px;align-items:baseline}
+.kv span{color:var(--ink-2);font-size:13px}
+.kv b{font-weight:500}
+.altline{font-size:14px;background:var(--surface-2);border-radius:var(--r-sm);padding:8px 10px}
+.altline b{margin-right:6px}
+.sheet-acts{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+.mvbox{display:flex;gap:8px;align-items:flex-end;margin-top:10px}
+.mvbox .f{flex:1;min-width:0;margin:0}
+.mvbox select{width:100%}
+
+/* Strecken & Orte */
+.grp-h{font-size:17px;margin:6px 0 -6px}
+.rc-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.rc-h h3{margin:0;font-size:16.5px;flex:1;min-width:60%}
+.sp-dot{width:10px;height:10px;border-radius:50%;background:var(--sc)}
+.rstat{font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 7px}
+.rs-ok{background:var(--paid-bg);color:var(--paid-ink)}
+.rs-mid{background:var(--res-bg);color:var(--res-ink)}
+.rs-warn{background:var(--open-bg);color:var(--open-ink)}
+.risk{background:var(--open-bg);color:var(--open-ink);border-radius:var(--r-sm);padding:8px 10px;margin:6px 0;font-size:13.5px}
+.risk ul{margin-top:3px}
+.rcard,.fcard{display:flex;flex-direction:column;gap:6px}
+.rcard.r-w1,.fcard{border-left:4px solid var(--rc,var(--w1))}
+.rcard.r-w2{border-left:4px solid var(--w2)}
+.fk{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+
+/* Standort */
+.verdict{border:2px solid var(--paid-ink)}
+.verdict h2{font-size:20px;margin:8px 0}
+.sct{display:grid;gap:0;font-size:14px}
+.sct-r{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(4,minmax(0,.7fr));gap:6px;align-items:center;padding:8px 2px;border-top:1px solid var(--line)}
+.sct-r>span:not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+.sct-h{font-size:11.5px;font-weight:700;color:var(--ink-2);border-top:0}
+.sct-r b{display:block}
+.sct-r i{display:block;font-style:normal;font-size:11.5px;color:var(--ink-2)}
+.sct-r .tt{font-weight:800;font-size:15px}
+.sct-r.now b::after{content:" · bisher";font-weight:500;font-size:11.5px;color:var(--w1)}
+.sct-d summary{list-style:none;cursor:pointer}
+.sct-d summary::-webkit-details-marker{display:none}
+.sct-b{padding:4px 2px 10px;display:grid;gap:4px}
+.cmbs{display:grid;gap:10px}
+.cmb{border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px}
+.cmb.rec{border:2px solid var(--paid-ink)}
+.cmb-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cmb-h .tt{margin-left:auto;font-weight:800;font-size:17px}
+.cmb p{margin:4px 0 0}
+.qa{border-top:1px solid var(--line);padding:9px 0}
+.qa summary{cursor:pointer;font-weight:600}
+.qa-b{padding-top:6px}
+.qa-b p{margin:0 0 6px;font-size:14px}
+
+/* Ferien: Tagesprogramm */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
+.tl span{display:flex;flex-direction:column;font-size:12.5px;background:var(--surface-2);border-radius:var(--r-sm);padding:6px 8px}
+.tl b{font-size:13px}
+.pday{display:flex;flex-direction:column;gap:8px;border-left:4px solid var(--rc)}
+.pday-h{display:flex;flex-direction:column;gap:1px}
+.pday-h .wd{font-weight:700;font-size:17px}
+.popt{display:flex;gap:10px;border:1px solid var(--line);border-radius:var(--r-sm);padding:9px 10px}
+.popt.on{border:2px solid var(--accent);background:color-mix(in srgb, var(--accent) 6%, var(--surface))}
+.popt.none{opacity:.7}
+.popt .pl{appearance:none;flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);font-weight:800;font-size:15px;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.popt.none .pl{border-style:dashed}
+.popt.on .pl{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.pbody b{font-size:15px}
+.pbody p{margin:0}
+.pbody .fl-act{margin-top:4px}
+
+/* Kosten */
+.costs{display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:6px}
+.crow{display:flex;gap:12px;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line)}
+.crow:first-child{border-top:0}
+.cn{flex:1;min-width:0}
+.cn p{margin:2px 0 0}
+.cv{flex:none;display:flex;flex-direction:column;align-items:flex-end;text-align:right;font-variant-numeric:tabular-nums;max-width:46%}
+.crow.total{border-top:2px solid var(--ink)}
+.crow.total b{font-size:16px}
+
+/* Hotels */
+.area-h{font-size:15px;margin:4px 0 0;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em}
+.topn{color:var(--accent)}
+.ht-price .tot{display:block;font-size:13.5px;font-weight:600;margin-top:2px}
+
+/* Karte: Werkzeuge, Wegpunkte */
+.mtools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.msel{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:3px 6px 3px 12px;background:var(--surface);min-height:38px;font-size:14px}
+.msel span{color:var(--ink-2);font-size:13px}
+.msel select{border:0;background:none;font:inherit;color:var(--ink);padding:4px 2px;max-width:150px}
+.wpm circle{fill:var(--surface);stroke-width:3}
+.wpm.L-rad circle{stroke:var(--bike)} .wpm.L-lauf circle{stroke:var(--run)} .wpm.L-weg circle{stroke:var(--travel)}
+.wpm text{font-size:11.5px;font-weight:800;fill:var(--ink)}
+.mlbl.wpl{font-weight:700}
+.wpdot{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:2px solid var(--travel);font-style:normal;font-size:10px;font-weight:800;margin-right:6px;vertical-align:-3px;background:var(--surface);color:var(--ink);flex:none}
+.wpdot.L-rad{border-color:var(--bike)} .wpdot.L-lauf{border-color:var(--run)}
+.wplist{margin:6px 0;padding-left:20px;font-size:14px;display:grid;gap:2px}
+.ht-tag .topn{color:inherit;font-weight:800;margin-right:2px;padding-right:6px;border-right:1px solid currentColor}
+
 .appbar{padding-top:env(safe-area-inset-top)}
 </style>
 </head>
@@ -556,10 +707,11 @@ ol.adv{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <main id="view" class="wrap" tabindex="-1"><div class="view"><div class="skel"></div><div class="skel"></div></div></main>
 <nav class="tabbar" aria-label="Bereiche">
   <div class="wrap">
-    <a class="tab" href="#uebersicht" data-go="uebersicht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z"/></svg><span>Übersicht</span></a>
+    <a class="tab" href="#uebersicht" data-go="uebersicht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z"/></svg><span>Start</span></a>
     <a class="tab" href="#karte" data-go="karte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6Z"/><path d="M9 4v14M15 6v14"/></svg><span>Karte</span></a>
     <a class="tab" href="#tage" data-go="tage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Tage</span></a>
-    <a class="tab" href="#entdecken" data-go="entdecken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15.5" cy="8" r="3.2"/><path d="M15.5 2.5v1.2M21 8h-1.2M19.4 4.1l-.8.8M11.6 4.1l.8.8"/><path d="M3 15.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 19.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0"/></svg><span>Entdecken</span></a>
+    <a class="tab" href="#training" data-go="training"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.2-5.5 4.2 11 2.4-5.5H21"/></svg><span>Training</span></a>
+    <a class="tab" href="#entdecken" data-go="entdecken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15.5" cy="8" r="3.2"/><path d="M15.5 2.5v1.2M21 8h-1.2M19.4 4.1l-.8.8M11.6 4.1l.8.8"/><path d="M3 15.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 19.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0"/></svg><span>Ferien</span></a>
     <a class="tab" href="#buchungen" data-go="buchungen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7h17v3a2 2 0 0 0 0 4v3h-17v-3a2 2 0 0 0 0-4Z"/><path d="M14.5 7.5v1.5M14.5 11.25v1.5M14.5 15v1.5"/></svg><span>Buchen</span></a>
     <a class="tab" href="#infos" data-go="infos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.2"/></svg><span>Infos</span></a>
     <a class="tab" href="#listen" data-go="listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6.5h10M10 12h10M10 17.5h10"/><path d="m3.5 6.5 1.4 1.4 2.4-2.8M3.5 12l1.4 1.4 2.4-2.8M3.5 17.5l1.4 1.4 2.4-2.8"/></svg><span>Listen</span></a>
@@ -573,13 +725,14 @@ ol.adv{list-style:none;margin:0;padding:0;display:grid;gap:10px}
    nur Häkchen werden gespeichert – auf diesem Gerät. */
 (function(){
   window.__PUBLIC = true;
-  var SNAP = {"trip/days": {"days": {"2027-02-13": {"region": "unterwegs", "title": "Abflug Malpensa", "sessions": [{"sport": "lauf", "min": null, "ort": "Zuhause", "details": "Optional, locker vor der Anreise.", "alt": "", "done": false, "id": "13a"}], "nachmittag": "Anreise nach Malpensa, Abflug 13:05 (TG941).", "abend": "Nachtflug: schlafen, viel trinken.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-14": {"region": "phuketnord", "title": "Ankunft Phuket", "sessions": [{"sport": "schwimmen", "min": null, "ort": "Meer oder Hotelpool", "details": "Nur wenn fit: Beine lockern nach dem Flug.", "alt": "", "done": false, "id": "14a"}], "nachmittag": "05:55 Bangkok, Inlandflug nach Phuket (~1 Std. 20), Transfer nach Layan (~20 Min.). Early Check-in?", "abend": "Strand Layan, früh schlafen. Wer fit ist: Lard Yai, Sonntagsmarkt in Phuket Town (16–22 Uhr).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-15": {"region": "phuketnord", "title": "Velo abholen", "sessions": [{"sport": "lauf", "min": null, "ort": "Laguna-Wege (flach)", "details": "Früh, vor der Hitze.", "alt": "Thanyapura: 500-m-Bahn", "done": false, "id": "15a"}], "nachmittag": "Velo bei Siam Bike Tours (Boat Avenue) holen: Fitting, Rally-Pedale montieren, Kurbellänge eingeben. Roller mieten, Banana Beach.", "abend": "Thai-Essen in Cherngtalay.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-16": {"region": "phuketnord", "title": "Hausrunde", "sessions": [{"sport": "rad", "min": null, "ort": "Laguna – Bang Tao – Surin (25 km, flach)", "details": "Hausrunde zum Einrollen, darf mehrmals sein.", "alt": "Indoor: Spinning in Thanyapura (Kursplan prüfen)", "done": false, "id": "16a"}], "nachmittag": "Layan-Strand; Schnorcheln am Nordende von Bang Tao.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-17": {"region": "phuketnord", "title": "Koh Yao Noi", "sessions": [{"sport": "lauf", "min": null, "ort": "Laguna-Wege oder Strand Bang Tao bei Ebbe", "details": "Kurz, damit das Boot um 9:30 klappt.", "alt": "", "done": false, "id": "17a"}], "nachmittag": "Speedboot ab Bang Rong (~30 Min.). Auf der Insel Roller, ruhige Strände, Thai-Essen; Baden je nach Gezeiten.", "abend": "Zurück in Layan.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-18": {"region": "phuketnord", "title": "Thanyapura", "sessions": [{"sport": "schwimmen", "min": null, "ort": "Thanyapura, 50-m-Becken", "details": "Ab 6 Uhr offen.", "alt": "", "done": false, "id": "18a"}, {"sport": "lauf", "min": null, "ort": "Thanyapura, 500-m-Bahn", "details": "", "alt": "", "done": false, "id": "18b"}], "nachmittag": "Siesta, Pool. Nachmittags mit dem Roller zur Banana Beach oder nach Nai Thon.", "abend": "Thai-Essen.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-19": {"region": "phuketnord", "title": "Laem-Sai-Runde", "sessions": [{"sport": "rad", "min": null, "ort": "Laguna – Laem Sai Pier – Laguna (50 km)", "details": "Blick auf die Phang-Nga-Bucht.", "alt": "North-Phuket-/Thalang-Runde (50–70 km) – oder Indoor im Thanyapura", "done": false, "id": "19a"}], "nachmittag": "Puffer: Strand, Massage, Packen für den Umzug.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-20": {"region": "umzug", "title": "Umzug nach Khao Lak", "sessions": [{"sport": "rad", "min": null, "ort": "Phuket Cycling Club (samstags meist ab 6 Uhr)", "details": "Treffpunkt in der Facebook-Gruppe prüfen.", "alt": "Allein die Hausrunde Laguna – Surin", "done": false, "id": "20a"}], "nachmittag": "Check-out, Van mit Platz fürs Velo. Halt am Natai Beach: Mittagessen, 10 km fast leerer Strand.", "abend": "Ankommen in Khao Lak; Bang Niang Market (Sa).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-21": {"region": "khaolak", "title": "Küstenrunde Nord", "sessions": [{"sport": "rad", "min": null, "ort": "Khuekkhak – Ban Nam Khem (43 km, 306 Hm)", "details": "Verlauf vorher in Bikemap prüfen.", "alt": "Indoor: Velo-Ergometer im Hotel-Fitness", "done": false, "id": "21a"}], "nachmittag": "Strand, Siesta.", "abend": "Takua Pa Old Town: Walking Street (So ca. 16–19 Uhr).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-22": {"region": "khaolak", "title": "Similan-Inseln", "sessions": [], "nachmittag": "Similan-Tagesausflug: Abholung 6:30–7:30, Speedboot ab Thap Lamu (1 Std. 15 bis 1 Std. 30), zurück ~16:30–17:30.", "abend": "Bang Niang Market (Mo).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-23": {"region": "khaolak", "title": "Lange Runde", "sessions": [{"sport": "rad", "min": null, "ort": "«Khao Lak 1» (76 km, 303 Hm)", "details": "Früh los, mindestens 2 Liter, unterwegs 7-Eleven.", "alt": "Kürzer: Khao Lak – Thai Mueang (49 km, 432 Hm)", "done": false, "id": "23a"}], "nachmittag": "Strand, Siesta.", "abend": "Khao Lak Local Market (täglich 16:30–23:30).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-24": {"region": "khaolak", "title": "Surin oder Koh Kho Khao", "sessions": [{"sport": "lauf", "min": null, "ort": "Leuchtturm-Runde ab Bang Niang (5,5 km)", "details": "Mit Surin-Ausflug nur kurz oder auslassen.", "alt": "", "done": false, "id": "24a"}, {"sport": "schwimmen", "min": null, "ort": "Meer (Bang Niang)", "details": "Ruhige Morgenstunden nutzen.", "alt": "", "done": false, "id": "24b"}], "nachmittag": "Surin-Ausflug (Speedboot ~1 Std. 45) – oder mit dem Roller nach Ban Nam Khem und mit der Fähre nach Koh Kho Khao.", "abend": "Bang Niang Market (Mi).", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-25": {"region": "khaolak", "title": "Lieblingsrunde", "sessions": [{"sport": "rad", "min": null, "ort": "Lieblingsrunde nochmals, z. B. Ban Nam Khem (43 km)", "details": "", "alt": "Indoor: Velo-Ergometer im Hotel-Fitness", "done": false, "id": "25a"}], "nachmittag": "Lam-Ru-Nationalpark (Small Sandy Beach) oder Ton-Chong-Fa-Wasserfall.", "abend": "Letzter Abend am Strand.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-26": {"region": "heimweg", "title": "Abreise", "sessions": [{"sport": "schwimmen", "min": null, "ort": "Meer oder Hotelpool", "details": "Kurz und locker.", "alt": "", "done": false, "id": "26a"}], "nachmittag": "Late Check-out? Transfer Khao Lak → Boat Avenue (Velo zurück) → Flughafen, Inlandflug Phuket → Bangkok.", "abend": "TG940 um 00:35 (Sa 27.2.) ab Bangkok.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-27": {"region": "unterwegs", "title": "Ankunft Malpensa", "sessions": [], "nachmittag": "07:10 Landung in Malpensa, Heimreise.", "abend": "Früh schlafen.", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}, "2027-02-28": {"region": "unterwegs", "title": "Puffertag", "sessions": [{"sport": "lauf", "min": null, "ort": "Zuhause", "details": "Optional, locker.", "alt": "", "done": false, "id": "28a"}], "nachmittag": "Auspacken, Velo-Material versorgen.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T20:00:00Z"}}}, "trip/packing": {"items": {"p01": {"text": "Garmin Rally Pedale (Leistungsmesser)", "cat": "rad", "done": false, "order": 10, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p02": {"text": "Werkzeug für die Pedale: 8-mm-Inbus bzw. 15-mm-Pedalschlüssel (je nach Rally-Modell)", "cat": "rad", "done": false, "order": 20, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p03": {"text": "Montagefett für das Pedalgewinde", "cat": "rad", "done": false, "order": 30, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p04": {"text": "Radschuhe + Cleats (Ersatz-Cleats)", "cat": "rad", "done": false, "order": 40, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p05": {"text": "Sattelhöhe & Setback notiert (Bike-Fit unten)", "cat": "rad", "done": false, "order": 50, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p06": {"text": "Helm", "cat": "rad", "done": false, "order": 60, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p07": {"text": "Lichter vorne/hinten + Ladekabel (Start um 6 Uhr, Sonnenaufgang erst ~06:45)", "cat": "rad", "done": false, "order": 70, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p08": {"text": "Radcomputer/Uhr + HF-Sensor + Ladekabel", "cat": "rad", "done": false, "order": 80, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p09": {"text": "Trikots & Hosen (3 Sets)", "cat": "rad", "done": false, "order": 90, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p10": {"text": "UV-Ärmlinge (UV-Index 11+)", "cat": "rad", "done": false, "order": 100, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p11": {"text": "Trinkflaschen (2–3)", "cat": "rad", "done": false, "order": 110, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p12": {"text": "Mini-Pumpe, Schlauch, Reifenheber (CO₂-Kartuschen: Airline-Regeln prüfen)", "cat": "rad", "done": false, "order": 120, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p13": {"text": "Sitzcreme", "cat": "rad", "done": false, "order": 130, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p14": {"text": "Schwimmbrille getönt + klar", "cat": "schwimmen", "done": false, "order": 140, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p15": {"text": "Badehose / Badeanzug (2)", "cat": "schwimmen", "done": false, "order": 150, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p16": {"text": "Badekappe", "cat": "schwimmen", "done": false, "order": 160, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p17": {"text": "Pullbuoy / Paddles (optional)", "cat": "schwimmen", "done": false, "order": 170, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p18": {"text": "Neopren? Nein – Meer um 29 °C", "cat": "schwimmen", "done": false, "order": 180, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p19": {"text": "Schnorchelmaske + Schnorchel (optional, eigene sitzt besser)", "cat": "schwimmen", "done": false, "order": 190, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p20": {"text": "UV-Shirt zum Schnorcheln", "cat": "schwimmen", "done": false, "order": 200, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p21": {"text": "Laufschuhe (evtl. 2 Paar)", "cat": "lauf", "done": false, "order": 210, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p22": {"text": "Laufbekleidung (3 Sets), Cap/Visor", "cat": "lauf", "done": false, "order": 220, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p23": {"text": "Laufgürtel / Softflasks", "cat": "lauf", "done": false, "order": 230, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p24": {"text": "Sonnenbrille", "cat": "lauf", "done": false, "order": 240, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p25": {"text": "Elektrolyte (Tabletten/Pulver)", "cat": "ernaehrung", "done": false, "order": 250, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p26": {"text": "Gels/Riegel für lange Einheiten", "cat": "ernaehrung", "done": false, "order": 260, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p27": {"text": "Shaker / Faltflasche", "cat": "ernaehrung", "done": false, "order": 270, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p28": {"text": "Reiseadapter (Schweizer Stecker Typ J passt nicht)", "cat": "elektronik", "done": false, "order": 280, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p29": {"text": "Ladegeräte Handy/Uhr/Radcomputer", "cat": "elektronik", "done": false, "order": 290, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p30": {"text": "Powerbank (ins Handgepäck)", "cat": "elektronik", "done": false, "order": 300, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p31": {"text": "Wasserdichte Handyhülle fürs Boot", "cat": "elektronik", "done": false, "order": 310, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p32": {"text": "Kopfhörer", "cat": "elektronik", "done": false, "order": 320, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p33": {"text": "Sonnencreme LSF 50+ ohne Oxybenzon, Octinoxat, 4-MBC, Butylparaben (Pflicht in Meeres-Nationalparks)", "cat": "gesundheit", "done": false, "order": 330, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p34": {"text": "After-Sun", "cat": "gesundheit", "done": false, "order": 340, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p35": {"text": "Mückenschutz", "cat": "gesundheit", "done": false, "order": 350, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p36": {"text": "Reiseapotheke & persönliche Medikamente", "cat": "gesundheit", "done": false, "order": 360, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p37": {"text": "Blasenpflaster, Tape", "cat": "gesundheit", "done": false, "order": 370, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p38": {"text": "Leichte Kleidung, Sonnenhut", "cat": "kleidung", "done": false, "order": 380, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p39": {"text": "Tempelkleidung: Schultern & Knie bedeckt", "cat": "kleidung", "done": false, "order": 390, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p40": {"text": "Sandalen / Flip-Flops", "cat": "kleidung", "done": false, "order": 400, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p41": {"text": "Pullover für Flug & klimatisierte Räume", "cat": "kleidung", "done": false, "order": 410, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p42": {"text": "Reisepass – liegt im Dokumentenordner (keine Nummer hier speichern)", "cat": "dokumente", "done": false, "order": 420, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p43": {"text": "TDAC-Bestätigung (QR-Code) auf dem Handy", "cat": "dokumente", "done": false, "order": 430, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p44": {"text": "Führerausweis + Internationaler Führerausweis mit Kategorie A (für den Roller)", "cat": "dokumente", "done": false, "order": 440, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p45": {"text": "Versicherungskarte & Notfallnummer der Versicherung", "cat": "dokumente", "done": false, "order": 450, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p46": {"text": "Kredit- und Debitkarte – im Portemonnaie (keine Nummern hier)", "cat": "dokumente", "done": false, "order": 460, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p47": {"text": "Etwas Bargeld CHF/THB", "cat": "dokumente", "done": false, "order": 470, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}}}, "trip/checklist": {"items": {"c01": {"text": "Reisepass prüfen: gültig mind. bis 14.8.2027 (6 Monate über die Einreise)", "due": "2026-11-15", "src": "eda_einreise", "note": "", "done": false, "order": 10, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c02": {"text": "Flüge Malpensa ⇄ Bangkok buchen: TG941 Sa 13.2., TG940 Sa 27.2. um 00:35", "due": "2026-11-30", "src": "thai_sched", "note": "", "done": false, "order": 20, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c03": {"text": "Inlandflüge Bangkok ⇄ Phuket buchen (14.2. und 26.2.), am besten auf demselben Ticket", "due": "2026-11-30", "src": "kayak_ie", "note": "", "done": false, "order": 30, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c04": {"text": "Reise- & Krankenversicherung prüfen: Rücktransport, Velo- und Rollerunfälle", "due": "2026-12-01", "src": "tcs_laender", "note": "", "done": false, "order": 40, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c05": {"text": "Impfungen / Reisemedizin prüfen", "due": "2026-12-01", "src": "healthytravel", "note": "", "done": false, "order": 50, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c06": {"text": "Unterkunft Woche 1 buchen (Layan / Bang Tao-Nord)", "due": "2026-12-05", "src": "lovethailand_layan", "note": "", "done": false, "order": 60, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c07": {"text": "Unterkunft Woche 2 buchen (Khao Lak, mit Fitnessraum und Velo-Ergometer)", "due": "2026-12-05", "src": "haven_kl", "note": "", "done": false, "order": 70, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c08": {"text": "Rennrad bei Siam Bike Tours reservieren: Grösse, Mehrtagespreis, Übergabe 15.2., Rückgabe 26.2.", "due": "2026-12-15", "src": "franco_sbt", "note": "", "done": false, "order": 80, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c09": {"text": "Internationaler Führerausweis mit Kategorie A (TCS) – für den Roller", "due": "2026-12-31", "src": "tcs", "note": "", "done": false, "order": 90, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c10": {"text": "Similan-Ausflug (22.2.) buchen, Surin optional", "due": "2027-01-15", "src": "vtt_similan", "note": "", "done": false, "order": 100, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c11": {"text": "Thanyapura: Tagespass-Preis und Öffnungszeiten anfragen", "due": "2027-01-15", "src": "thanya_faq", "note": "", "done": false, "order": 110, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c12": {"text": "enduco: Trainingswochen 13.–28.2. planen", "due": "2027-01-31", "src": "", "note": "", "done": false, "order": 120, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c13": {"text": "Kreditkarte: Auslandseinsatz & Limite prüfen", "due": "2027-02-01", "src": "", "note": "", "done": false, "order": 130, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c14": {"text": "Roaming / eSIM für Thailand organisieren", "due": "2027-02-05", "src": "", "note": "", "done": false, "order": 140, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c15": {"text": "Reiseadapter besorgen", "due": "2027-02-05", "src": "plugs_mg", "note": "", "done": false, "order": 150, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c16": {"text": "Sonnencreme ohne die vier verbotenen Filter kaufen (Similan, Surin)", "due": "2027-02-05", "src": "sunscreen_ks", "note": "", "done": false, "order": 160, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c17": {"text": "Travel Admin App (EDA) installieren & Reise erfassen", "due": "2027-02-05", "src": "eda_app", "note": "", "done": false, "order": 170, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c18": {"text": "Anreise nach Malpensa planen (Zug oder Parkplatz; Abflug 13:05)", "due": "2027-02-05", "src": "", "note": "", "done": false, "order": 180, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c19": {"text": "Zuhause organisieren (Post, Pflanzen, Schlüssel)", "due": "2027-02-10", "src": "", "note": "", "done": false, "order": 190, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c20": {"text": "Notfallnummern im Handy speichern", "due": "2027-02-10", "src": "expatden", "note": "", "done": false, "order": 200, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c21": {"text": "TDAC online ausfüllen (ab 11.2., frühestens 3 Tage vor Ankunft)", "due": "2027-02-12", "src": "tdac_portal", "note": "", "done": false, "order": 210, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}}}, "trip/settings": {"lockOn": true, "lockSalt": "d65b965f7d0ad170713d951aef40e0e7", "lockHash": "9710a8225fb00d53f100104cff6aa146f6ba12f03e737df8f919230b63f5d013", "lockAt": "2026-11-09T21:10:15Z", "lockBy": ""}};
+  var SNAP = {"trip/days": {"days": {"2027-02-13": {"region": "unterwegs", "title": "Abflug Malpensa", "sessions": [{"sport": "lauf", "min": 40, "ort": "Zuhause", "details": "Optional, locker vor der Anreise.", "alt": "Ruhetag", "done": false, "id": "13a", "start": "07:00", "focus": "Locker vor der Anreise", "z": "Z1–Z2", "load": "leicht", "opt": true}], "nachmittag": "Anreise nach Malpensa, Abflug 13:05.", "abend": "Nachtflug: schlafen, viel trinken.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-14": {"region": "phuketnord", "title": "Ankunft Phuket", "sessions": [{"sport": "schwimmen", "min": 25, "ort": "Meer oder Hotelpool", "details": "Nur wenn fit: Beine lockern nach dem Flug.", "alt": "30 Min. Strandspaziergang", "done": false, "id": "14a", "start": "16:30", "focus": "Lockern nach dem Flug", "z": "Z1", "load": "leicht", "opt": true}], "nachmittag": "05:55 Bangkok, Inlandflug nach Phuket (~1 Std. 20), Transfer nach Layan (~20 Min.). Early Check-in?", "abend": "Strand Layan, früh schlafen. Wer fit ist: Lard Yai, Sonntagsmarkt in Phuket Town (16–22 Uhr).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-15": {"region": "phuketnord", "title": "Velo abholen", "sessions": [{"sport": "lauf", "min": 45, "ort": "Laguna-Wege (flach)", "details": "Früh, vor der Hitze. Tempo nach Puls, nicht nach Pace.", "alt": "Thanyapura: 500-m-Bahn", "done": false, "id": "15a", "start": "06:15", "focus": "GA1 locker – Hitze angewöhnen", "z": "Z1–Z2", "load": "leicht", "route": "tl_laguna", "km": "ca. 8"}, {"id": "15b", "sport": "rad", "min": 45, "ort": "Laguna – Bang Tao", "details": "Nach dem Fitting: Sitzposition prüfen, Rally-Pedale koppeln.", "alt": "Auf Di verschieben", "start": "10:30", "focus": "Velo-Check", "z": "Z1", "load": "leicht", "route": "tr_laguna", "opt": true, "done": false}], "nachmittag": "Velo bei Siam Bike Tours (Boat Avenue) holen: Fitting, Rally-Pedale montieren, Kurbellänge eingeben. Roller mieten, Banana Beach.", "abend": "Thai-Essen in Cherngtalay.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-16": {"region": "phuketnord", "title": "Hausrunde", "sessions": [{"sport": "rad", "min": 120, "ort": "Laguna – Bang Tao – Surin (25 km, flach)", "details": "Hausrunde zum Einrollen, darf mehrmals sein. Puls in Z2 halten, auch wenn die Watt tiefer sind als zuhause.", "alt": "Nordküste bis Mai Khao · bei Regen Spinning in Thanyapura", "done": false, "id": "16a", "start": "06:15", "focus": "GA1 flach", "z": "Z2", "load": "mittel", "route": "tr_laguna", "km": "ca. 50–60"}, {"id": "16b", "sport": "schwimmen", "min": 30, "ort": "Meer (Bang Tao / Layan)", "details": "Am späten Nachmittag, zwischen den Flaggen.", "alt": "Hotelpool", "start": "17:00", "focus": "Locker, Technik", "z": "Z1–Z2", "load": "leicht", "opt": true, "done": false}], "nachmittag": "Layan-Strand; Schnorcheln am Nordende von Bang Tao.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-17": {"region": "phuketnord", "title": "Koh Yao Noi", "sessions": [{"sport": "lauf", "min": 40, "ort": "Laguna-Wege oder Strand Bang Tao bei Ebbe", "details": "Kurz, damit das Boot um 9:30 klappt.", "alt": "Laguna-Wege", "done": false, "id": "17a", "start": "06:15", "focus": "Locker + 6 × 20 s Steigerungen", "z": "Z1–Z2", "load": "leicht", "route": "tl_bangtao", "km": "ca. 7"}], "nachmittag": "Speedboot ab Bang Rong (~30 Min.). Auf der Insel Roller, ruhige Strände, Thai-Essen; Baden je nach Gezeiten.", "abend": "Zurück in Layan.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-18": {"region": "phuketnord", "title": "Thanyapura", "sessions": [{"sport": "schwimmen", "min": 60, "ort": "Thanyapura, 50-m-Becken", "details": "Tempo aus deinem CSS-Test (400/200 m). Anlagen laut FAQ 7–21 Uhr – Zeit und Bahn beim Reservieren bestätigen.", "alt": "NH Boat Lagoon (50 m) · sonst 45 Min. im Meer", "done": false, "id": "18a", "start": "07:00", "focus": "Technik + 4 × 400 m nach CSS", "z": "CSS", "load": "hart", "fac": "f_thanya", "tr": 50, "km": "ca. 3 km"}, {"sport": "lauf", "min": 30, "ort": "Thanyapura, 500-m-Bahn", "details": "Gleich nach dem Schwimmen.", "alt": "weglassen", "done": false, "id": "18b", "start": "08:15", "focus": "Locker auf der Bahn", "z": "Z1–Z2", "load": "leicht", "route": "tl_track", "opt": true}], "nachmittag": "Siesta, Pool. Nachmittags mit dem Roller zur Banana Beach oder nach Nai Thon.", "abend": "Thai-Essen.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-19": {"region": "phuketnord", "title": "Lange Runde Nord", "sessions": [{"sport": "rad", "min": 210, "ort": "Nordküste – Sarasin-Brücke – Pak Weep (komoot-Runde ab Thalang)", "details": "Schlüsseleinheit. Anfahrt nach Thalang mit Taxi/Van (Velo hinten rein) oder ab Hotel der Nordküste entlang. Alle 15–20 Min. trinken.", "alt": "Kürzer: nur bis Sarasin-Brücke · Laem-Sai-Runde mit Guide (Siam Bike Tours, ab 9 Uhr)", "done": false, "id": "19a", "start": "06:15", "focus": "Lang GA1, wellig – optional 2 × 15 Min. Z3", "z": "Z2 (Z3)", "load": "hart", "route": "tr_pakweep", "tr": 50, "km": "bis 108", "hm": "440–450"}], "nachmittag": "Puffer: Strand, Massage, Packen für den Umzug.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-20": {"region": "umzug", "title": "Umzug nach Khao Lak", "sessions": [{"sport": "rad", "min": 150, "ort": "Gruppenfahrt Samstag (Phuket Cycling Club ab ca. 6 Uhr, Phuket Road Riders 5:45, Laguna Triathlon Club)", "details": "Treffpunkt vorher prüfen. Danach Velo in den Van für Khao Lak.", "alt": "Allein die Hausrunde Laguna – Surin · oder 75 Min. Lauf am Strand", "done": false, "id": "20a", "start": "06:00", "focus": "Gruppenfahrt GA1", "z": "Z2", "load": "mittel", "fac": "f_groups", "km": "ca. 60–80"}], "nachmittag": "Check-out, Van mit Platz fürs Velo. Halt am Natai Beach: Mittagessen, 10 km fast leerer Strand.", "abend": "Ankommen in Khao Lak; Bang Niang Market (Sa).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-21": {"region": "khaolak", "title": "Küstenrunde Nord", "sessions": [{"sport": "rad", "min": 120, "ort": "Khuekkhak – Ban Nam Khem (43 km, 306 Hm)", "details": "Ungeprüfte Route: Abschnitte auf der Route 4 (Ausbau, Unfallschwerpunkte) meiden. Verlauf vorher in Bikemap prüfen.", "alt": "60 Min. Lauf am Strand · Indoor: Velo-Ergometer im Hotel-Fitness", "done": false, "id": "21a", "start": "06:15", "focus": "GA1 – nur auf ruhigen Abschnitten", "z": "Z2", "load": "mittel", "route": "tr_kl_north", "km": "43", "hm": "306"}], "nachmittag": "Strand, Siesta.", "abend": "Takua Pa Old Town: Walking Street (So ca. 16–19 Uhr).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-22": {"region": "khaolak", "title": "Similan-Inseln", "sessions": [], "nachmittag": "Similan-Tagesausflug: Abholung 6:30–7:30, Speedboot ab Thap Lamu (1 Std. 15 bis 1 Std. 30), zurück ~16:30–17:30.", "abend": "Bang Niang Market (Mo).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-23": {"region": "khaolak", "title": "Lange Runde", "sessions": [{"sport": "rad", "min": 165, "ort": "«Khao Lak 1» (76 km, 303 Hm)", "details": "Ungeprüft: nur fahren, wenn die Strecke ruhige Nebenstrassen nutzt. Früh los, mindestens 2 Liter, unterwegs 7-Eleven.", "alt": "90 Min. Lauf (Strände Bang Niang – Nang Thong) · kürzer: Khao Lak – Thai Mueang (49 km)", "done": false, "id": "23a", "start": "06:00", "focus": "Lang GA1", "z": "Z2", "load": "mittel", "fac": "f_kl_bike", "km": "76", "hm": "303"}], "nachmittag": "Strand, Siesta.", "abend": "Khao Lak Local Market (täglich 16:30–23:30).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-24": {"region": "khaolak", "title": "Surin oder Koh Kho Khao", "sessions": [{"sport": "lauf", "min": 50, "ort": "Leuchtturm-Runde ab Bang Niang (5,5 km)", "details": "Mit Surin-Ausflug nur kurz oder auslassen.", "alt": "", "done": false, "id": "24a", "start": "06:00", "focus": "Locker", "z": "Z1–Z2", "load": "leicht", "route": "tl_kl", "km": "5,5–11"}, {"sport": "schwimmen", "min": 40, "ort": "Meer (Bang Niang)", "details": "Ruhige Morgenstunden nutzen; zwischen den Flaggen.", "alt": "", "done": false, "id": "24b", "start": "07:00", "focus": "Freiwasser 3 × 8 Min. zügig, mit Sichten", "z": "Z2–Z3", "load": "mittel", "fac": "f_kl_swim"}], "nachmittag": "Surin-Ausflug (Speedboot ~1 Std. 45) – oder mit dem Roller nach Ban Nam Khem und mit der Fähre nach Koh Kho Khao.", "abend": "Bang Niang Market (Mi).", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-25": {"region": "khaolak", "title": "Lieblingsrunde", "sessions": [{"sport": "rad", "min": 120, "ort": "Lieblingsrunde nochmals, z. B. Ban Nam Khem (43 km)", "details": "Ungeprüft – siehe Mo 21.2.", "alt": "75 Min. Lauf locker · Indoor: Velo-Ergometer im Hotel-Fitness", "done": false, "id": "25a", "start": "06:15", "focus": "GA1 locker", "z": "Z1–Z2", "load": "mittel", "route": "tr_kl_north", "km": "43", "hm": "306"}], "nachmittag": "Lam-Ru-Nationalpark (Small Sandy Beach) oder Ton-Chong-Fa-Wasserfall.", "abend": "Letzter Abend am Strand.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-26": {"region": "heimweg", "title": "Abreise", "sessions": [{"sport": "schwimmen", "min": 30, "ort": "Meer oder Hotelpool", "details": "Kurz und locker.", "alt": "", "done": false, "id": "26a", "start": "07:00", "focus": "Locker ausschwimmen", "z": "Z1", "load": "leicht", "fac": "f_kl_swim"}], "nachmittag": "Late Check-out? Transfer Khao Lak → Boat Avenue (Velo zurück) → Flughafen, Inlandflug Phuket → Bangkok.", "abend": "um 00:35 (Sa 27.2.) ab Bangkok.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-27": {"region": "unterwegs", "title": "Ankunft Malpensa", "sessions": [], "nachmittag": "07:10 Landung in Malpensa, Heimreise.", "abend": "Früh schlafen.", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}, "2027-02-28": {"region": "unterwegs", "title": "Puffertag", "sessions": [{"sport": "lauf", "min": 40, "ort": "Zuhause", "details": "Optional, locker.", "alt": "", "done": false, "id": "28a", "start": "", "focus": "Locker", "z": "Z1–Z2", "load": "leicht", "opt": true}], "nachmittag": "Auspacken, Velo-Material versorgen.", "abend": "", "notiz": "", "updatedAt": "2026-11-09T23:30:00Z"}}}, "trip/packing": {"items": {"p01": {"text": "Garmin Rally Pedale (Leistungsmesser)", "cat": "rad", "done": false, "order": 10, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p02": {"text": "Werkzeug für die Pedale: 8-mm-Inbus bzw. 15-mm-Pedalschlüssel (je nach Rally-Modell)", "cat": "rad", "done": false, "order": 20, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p03": {"text": "Montagefett für das Pedalgewinde", "cat": "rad", "done": false, "order": 30, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p04": {"text": "Radschuhe + Cleats (Ersatz-Cleats)", "cat": "rad", "done": false, "order": 40, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p05": {"text": "Sattelhöhe & Setback notiert (Bike-Fit unten)", "cat": "rad", "done": false, "order": 50, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p06": {"text": "Helm", "cat": "rad", "done": false, "order": 60, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p07": {"text": "Lichter vorne/hinten + Ladekabel (Start um 6 Uhr, Sonnenaufgang erst ~06:45)", "cat": "rad", "done": false, "order": 70, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p08": {"text": "Radcomputer/Uhr + HF-Sensor + Ladekabel", "cat": "rad", "done": false, "order": 80, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p09": {"text": "Trikots & Hosen (3 Sets)", "cat": "rad", "done": false, "order": 90, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p10": {"text": "UV-Ärmlinge (UV-Index 11+)", "cat": "rad", "done": false, "order": 100, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p11": {"text": "Trinkflaschen (2–3)", "cat": "rad", "done": false, "order": 110, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p12": {"text": "Mini-Pumpe, Schlauch, Reifenheber (CO₂-Kartuschen: Airline-Regeln prüfen)", "cat": "rad", "done": false, "order": 120, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p13": {"text": "Sitzcreme", "cat": "rad", "done": false, "order": 130, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p14": {"text": "Schwimmbrille getönt + klar", "cat": "schwimmen", "done": false, "order": 140, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p15": {"text": "Badehose / Badeanzug (2)", "cat": "schwimmen", "done": false, "order": 150, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p16": {"text": "Badekappe", "cat": "schwimmen", "done": false, "order": 160, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p17": {"text": "Pullbuoy / Paddles (optional)", "cat": "schwimmen", "done": false, "order": 170, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p18": {"text": "Neopren? Nein – Meer um 29 °C", "cat": "schwimmen", "done": false, "order": 180, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p19": {"text": "Schnorchelmaske + Schnorchel (optional, eigene sitzt besser)", "cat": "schwimmen", "done": false, "order": 190, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p20": {"text": "UV-Shirt zum Schnorcheln", "cat": "schwimmen", "done": false, "order": 200, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p21": {"text": "Laufschuhe (evtl. 2 Paar)", "cat": "lauf", "done": false, "order": 210, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p22": {"text": "Laufbekleidung (3 Sets), Cap/Visor", "cat": "lauf", "done": false, "order": 220, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p23": {"text": "Laufgürtel / Softflasks", "cat": "lauf", "done": false, "order": 230, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p24": {"text": "Sonnenbrille", "cat": "lauf", "done": false, "order": 240, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p25": {"text": "Elektrolyte (Tabletten/Pulver)", "cat": "ernaehrung", "done": false, "order": 250, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p26": {"text": "Gels/Riegel für lange Einheiten", "cat": "ernaehrung", "done": false, "order": 260, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p27": {"text": "Shaker / Faltflasche", "cat": "ernaehrung", "done": false, "order": 270, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p28": {"text": "Reiseadapter (Schweizer Stecker Typ J passt nicht)", "cat": "elektronik", "done": false, "order": 280, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p29": {"text": "Ladegeräte Handy/Uhr/Radcomputer", "cat": "elektronik", "done": false, "order": 290, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p30": {"text": "Powerbank (ins Handgepäck)", "cat": "elektronik", "done": false, "order": 300, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p31": {"text": "Wasserdichte Handyhülle fürs Boot", "cat": "elektronik", "done": false, "order": 310, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p32": {"text": "Kopfhörer", "cat": "elektronik", "done": false, "order": 320, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p33": {"text": "Sonnencreme LSF 50+ ohne Oxybenzon, Octinoxat, 4-MBC, Butylparaben (Pflicht in Meeres-Nationalparks)", "cat": "gesundheit", "done": false, "order": 330, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p34": {"text": "After-Sun", "cat": "gesundheit", "done": false, "order": 340, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p35": {"text": "Mückenschutz", "cat": "gesundheit", "done": false, "order": 350, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p36": {"text": "Reiseapotheke & persönliche Medikamente", "cat": "gesundheit", "done": false, "order": 360, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p37": {"text": "Blasenpflaster, Tape", "cat": "gesundheit", "done": false, "order": 370, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p38": {"text": "Leichte Kleidung, Sonnenhut", "cat": "kleidung", "done": false, "order": 380, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p39": {"text": "Tempelkleidung: Schultern & Knie bedeckt", "cat": "kleidung", "done": false, "order": 390, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p40": {"text": "Sandalen / Flip-Flops", "cat": "kleidung", "done": false, "order": 400, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p41": {"text": "Pullover für Flug & klimatisierte Räume", "cat": "kleidung", "done": false, "order": 410, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p42": {"text": "Reisepass – liegt im Dokumentenordner (keine Nummer hier speichern)", "cat": "dokumente", "done": false, "order": 420, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p43": {"text": "TDAC-Bestätigung (QR-Code) auf dem Handy", "cat": "dokumente", "done": false, "order": 430, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p44": {"text": "Führerausweis + Internationaler Führerausweis mit Kategorie A (für den Roller)", "cat": "dokumente", "done": false, "order": 440, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p45": {"text": "Versicherungskarte & Notfallnummer der Versicherung", "cat": "dokumente", "done": false, "order": 450, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p46": {"text": "Kredit- und Debitkarte – im Portemonnaie (keine Nummern hier)", "cat": "dokumente", "done": false, "order": 460, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "p47": {"text": "Etwas Bargeld CHF/THB", "cat": "dokumente", "done": false, "order": 470, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}}}, "trip/checklist": {"items": {"c01": {"text": "Reisepass prüfen: gültig mind. bis 14.8.2027 (6 Monate über die Einreise)", "due": "2026-11-15", "src": "eda_einreise", "note": "", "done": false, "order": 10, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c02": {"text": "Flüge Malpensa ⇄ Bangkok buchen: Sa 13.2., Sa 27.2. um 00:35", "due": "2026-11-30", "src": "thai_sched", "note": "", "done": false, "order": 20, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c03": {"text": "Inlandflüge Bangkok ⇄ Phuket buchen (14.2. und 26.2.), am besten auf demselben Ticket", "due": "2026-11-30", "src": "kayak_ie", "note": "", "done": false, "order": 30, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c04": {"text": "Reise- & Krankenversicherung prüfen: Rücktransport, Velo- und Rollerunfälle", "due": "2026-12-01", "src": "tcs_laender", "note": "", "done": false, "order": 40, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c05": {"text": "Impfungen / Reisemedizin prüfen", "due": "2026-12-01", "src": "healthytravel", "note": "", "done": false, "order": 50, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c06": {"text": "Unterkunft Woche 1 buchen (Layan / Bang Tao-Nord)", "due": "2026-12-05", "src": "lovethailand_layan", "note": "", "done": false, "order": 60, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c07": {"text": "Unterkunft Woche 2 buchen (Khao Lak, mit Fitnessraum und Velo-Ergometer)", "due": "2026-12-05", "src": "haven_kl", "note": "", "done": false, "order": 70, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c08": {"text": "Rennrad bei Siam Bike Tours reservieren: Grösse, Mehrtagespreis, Übergabe 15.2., Rückgabe 26.2.", "due": "2026-12-15", "src": "franco_sbt", "note": "", "done": false, "order": 80, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c09": {"text": "Internationaler Führerausweis mit Kategorie A (TCS) – für den Roller", "due": "2026-12-31", "src": "tcs", "note": "", "done": false, "order": 90, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c10": {"text": "Similan-Ausflug (22.2.) buchen, Surin optional", "due": "2027-01-15", "src": "vtt_similan", "note": "", "done": false, "order": 100, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c11": {"text": "Thanyapura: Tagespass-Preis und Öffnungszeiten anfragen", "due": "2027-01-15", "src": "thanya_faq", "note": "", "done": false, "order": 110, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c12": {"text": "enduco: Trainingswochen 13.–28.2. planen", "due": "2027-01-31", "src": "", "note": "", "done": false, "order": 120, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c13": {"text": "Kreditkarte: Auslandseinsatz & Limite prüfen", "due": "2027-02-01", "src": "", "note": "", "done": false, "order": 130, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c14": {"text": "Roaming / eSIM für Thailand organisieren", "due": "2027-02-05", "src": "", "note": "", "done": false, "order": 140, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c15": {"text": "Reiseadapter besorgen", "due": "2027-02-05", "src": "plugs_mg", "note": "", "done": false, "order": 150, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c16": {"text": "Sonnencreme ohne die vier verbotenen Filter kaufen (Similan, Surin)", "due": "2027-02-05", "src": "sunscreen_ks", "note": "", "done": false, "order": 160, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c17": {"text": "Travel Admin App (EDA) installieren & Reise erfassen", "due": "2027-02-05", "src": "eda_app", "note": "", "done": false, "order": 170, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c18": {"text": "Anreise nach Malpensa planen (Zug oder Parkplatz; Abflug 13:05)", "due": "2027-02-05", "src": "", "note": "", "done": false, "order": 180, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c19": {"text": "Zuhause organisieren (Post, Pflanzen, Schlüssel)", "due": "2027-02-10", "src": "", "note": "", "done": false, "order": 190, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c20": {"text": "Notfallnummern im Handy speichern", "due": "2027-02-10", "src": "expatden", "note": "", "done": false, "order": 200, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}, "c21": {"text": "TDAC online ausfüllen (ab 11.2., frühestens 3 Tage vor Ankunft)", "due": "2027-02-12", "src": "tdac_portal", "note": "", "done": false, "order": 210, "deleted": false, "updatedAt": "2026-11-09T20:00:00Z"}}}, "trip/settings": {"lockOn": true, "lockSalt": "d65b965f7d0ad170713d951aef40e0e7", "lockHash": "9710a8225fb00d53f100104cff6aa146f6ba12f03e737df8f919230b63f5d013", "lockAt": "2026-11-10T06:26:13Z", "lockBy": ""}};
   var KEY = 'th27-local-v1', local = {};
   try{ local = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; }catch(e){ local = {}; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(local)); }catch(e){} }
   function clone(o){ return o === undefined ? undefined : JSON.parse(JSON.stringify(o)); }
   function isTick(p){ return p.indexOf('ticks/') === 0; }
-  function cur(p){ return isTick(p) ? local[p] : SNAP[p]; }
+  function writable(p){ return isTick(p) || p === 'trip/days'; }
+  function cur(p){ return isTick(p) ? local[p] : (local[p] !== undefined ? local[p] : SNAP[p]); }
   function snap(p){ var d = cur(p), ex = d !== undefined && d !== null, c = clone(d);
     return { id: p.split('/').pop(), exists: ex, data: function(){ return c; }, metadata: { fromCache: false, hasPendingWrites: false } }; }
   var L = {};
@@ -590,8 +743,8 @@ ol.adv{list-style:none;margin:0;padding:0;display:grid;gap:10px}
   var db = { doc: function(p){ return {
     path: p,
     get: function(){ return Promise.resolve(snap(p)); },
-    set: function(d){ if (!isTick(p)) return deny(); local[p] = clone(d); save(); emit(p); return Promise.resolve(); },
-    update: function(d){ if (!isTick(p)) return deny(); if (!local[p]) local[p] = {}; merge(local[p], d); save(); emit(p); return Promise.resolve(); },
+    set: function(d){ if (!writable(p)) return deny(); local[p] = clone(d); save(); emit(p); return Promise.resolve(); },
+    update: function(d){ if (!writable(p)) return deny(); if (!local[p]) local[p] = isTick(p) ? {} : clone(SNAP[p] || {}); merge(local[p], d); save(); emit(p); return Promise.resolve(); },
     delete: function(){ return deny(); },
     onSnapshot: function(next){ (L[p] = L[p] || []).push(next); setTimeout(function(){ next(snap(p)); }, 0); return function(){}; }
   }; } };
@@ -609,7 +762,7 @@ const TRIP = { start:'2027-02-13', end:'2027-02-28', jesolo:'2027-04-24', hambur
 /* Inhalte (trip/…) ändert nur der Besitzer; Häkchen (ticks/…) dürfen auch Eingeladene mit «Can edit» setzen. */
 const DOCS = { bookings:'trip/bookings', days:'trip/days', packing:'trip/packing', checklist:'trip/checklist', budget:'trip/budget', expenses:'trip/expenses', notes:'trip/notes', bikefit:'trip/bikefit', tk_packing:'ticks/packing', tk_checklist:'ticks/checklist', tk_days:'ticks/days', settings:'trip/settings' };
 const DOC_KEYS = Object.keys(DOCS);
-const VIEWS = ['uebersicht','karte','tage','entdecken','buchungen','infos','packliste','checkliste'];
+const VIEWS = ['uebersicht','karte','tage','training','entdecken','buchungen','infos','packliste','checkliste'];
 const REGIONS = {
   unterwegs:{label:'Unterwegs', cls:'r-travel', sun:''},
   phuketnord:{label:'Phuket-Nord', cls:'r-w1', sun:'Sonne 06:45–18:37'},
@@ -1164,7 +1317,7 @@ const MAPGEO = {
 /* Punkte: L = Ebene, ic = Symbol, z = ab welchem Massstab (px/km) die Beschriftung erscheint */
 const MAPPTS = [
   {id:'hkt', L:'info', ic:'plane', lon:98.3169, lat:8.1132, n:'Flughafen Phuket', s:'HKT · Ankunft 14.2., Abflug 26.2.', z:0, q:'Phuket International Airport'},
-  {id:'sbt', L:'info', ic:'bike', lon:98.3045, lat:7.9985, n:'Boat Avenue · Siam Bike Tours', s:'Rennrad-Miete, Restaurants, Läden', z:14, q:'Siam Bike Tours Boat Avenue Phuket', d:'Mietvelo Giant TCR Advanced 2: 2’000 THB pro Tag; sonntags laut Google-Eintrag zu.', src:['franco_sbt']},
+  {id:'sbt', L:'info', ic:'bike', lon:98.3045, lat:7.9985, n:'Boat Avenue · Siam Bike Tours', s:'Rennrad-Miete, Restaurants, Läden', z:14, q:'Siam Bike Tours Boat Avenue Phuket', d:'Mietvelo Giant TCR Advanced 2: 2’000 THB pro Tag. Öffnungszeiten im Shop erfragen.', src:['franco_sbt']},
   {id:'thanya', L:'info', ic:'pool', lon:98.335, lat:8.044, n:'Thanyapura', s:'50-m-Becken, 500-m-Bahn, Spinning', z:6, q:'Thanyapura Phuket', d:'50 × 25 m, temperiert 26–29 °C; Tagespass vor Ort erfragen.', src:['swg_thanya','p101_gyms']},
   {id:'thalanghosp', L:'info', ic:'plus', lon:98.338, lat:8.027, n:'Thalang Hospital', s:'Öffentlich, nächstes Spital im Norden', z:12, q:'Thalang Hospital Phuket', src:['phuketnews_thalang']},
   {id:'bkh', L:'info', ic:'plus', lon:98.369, lat:7.906, n:'Bangkok Hospital Phuket', s:'Privat · Notfall 24/7 · +66 76 254 425', z:4, q:'Bangkok Hospital Phuket', src:['bh_phuket']},
@@ -1752,7 +1905,7 @@ function dayCard(iso,t){
   const d = dayOf(iso)||{}; const reg = REGIONS[d.region]?d.region:defaultRegion(iso); const R=REGIONS[reg];
   const ss = (Array.isArray(d.sessions)?d.sessions:[]).map(s=>Object.assign({}, s, {done: tickOf('days', iso+'|'+s.id, s).done}));
   const dt = parseISO(iso);
-  const sess = ss.length ? ss.map(s=>{ const sp=SPORTS[s.sport]||SPORTS.kraft; return '<div class="sess '+sp.cls+(s.done?' is-done':'')+'"><span class="bar-s"></span><div class="txt"><b>'+sp.label+(s.sport!=='frei'&&s.min?' · '+fmtMin(s.min):'')+'</b>'+(s.ort?' <span class="where">· '+esc(s.ort)+'</span>':'')+(s.details?'<div class="det">'+esc(s.details)+'</div>':'')+(s.alt?'<div class="alt"><b>oder</b>'+esc(s.alt)+'</div>':'')+'</div><button class="chk" role="checkbox" aria-checked="'+(!!s.done)+'" aria-label="'+esc(sp.label+' erledigt')+'" data-act="sess-done" data-day="'+iso+'" data-sid="'+esc(s.id)+'"'+(canTick()?'':' disabled')+'>'+ICON_CHECK+'</button></div>'; }).join('') : '<p class="muted small">Kein Training geplant.</p>';
+  const sess = ss.length ? ss.map(s=>{ const sp=SPORTS[s.sport]||SPORTS.kraft; return '<div class="sess '+sp.cls+(s.done?' is-done':'')+(s.skip?' is-skip':'')+'"><span class="bar-s"></span><div class="txt"><b>'+(s.start?esc(s.start)+' · ':'')+sp.label+(s.sport!=='frei'&&s.min?' · '+fmtMin(s.min):'')+(s.focus?' – '+esc(s.focus):'')+(s.opt?' <i class="ld ld-opt">optional</i>':'')+(s.skip?' <i class="ld ld-skip">ausgelassen</i>':'')+'</b>'+(s.ort?' <span class="where">· '+esc(s.ort)+'</span>':'')+(s.details?'<div class="det">'+esc(s.details)+'</div>':'')+(s.alt?'<div class="alt"><b>oder</b>'+esc(s.alt)+'</div>':'')+'</div><button class="chk" role="checkbox" aria-checked="'+(!!s.done)+'" aria-label="'+esc(sp.label+' erledigt')+'" data-act="sess-done" data-day="'+iso+'" data-sid="'+esc(s.id)+'"'+(canTick()?'':' disabled')+'>'+ICON_CHECK+'</button></div>'; }).join('') : '<p class="muted small">Kein Training geplant.</p>';
   const txt = (lbl,v) => v ? '<div class="dlbl">'+lbl+'</div><p class="dtxt">'+esc(v)+'</p>' : '';
   return '<article class="day '+R.cls+(iso===t?' is-today':'')+'" id="d-'+iso+'">'+
     '<header><div class="dd"><span class="wd">'+WD[dt.getUTCDay()]+'</span><span class="dn">'+dt.getUTCDate()+'.'+(dt.getUTCMonth()+1)+'.</span></div><div style="flex:1;min-width:0"><h3>'+esc(d.title||'Noch offen')+'</h3><div class="reg">'+esc(R.label)+(R.sun?' · '+R.sun:'')+'</div></div>'+(canManage()?'<button class="icon-btn" data-act="day-edit" data-day="'+iso+'" aria-label="Tag bearbeiten">'+ICON_EDIT+'</button>':'')+'</header>'+
@@ -1773,7 +1926,7 @@ function editDay(iso){
     '<label class="f"><span>Abend</span><textarea name="abend" rows="2" maxlength="600">'+esc(d.abend)+'</textarea></label>'+
     '<label class="f"><span>Notiz</span><textarea name="notiz" rows="2" maxlength="800">'+esc(d.notiz)+'</textarea></label>';
   openSheet(fmtDay(iso,{year:true}), body, { onSubmit: async form => {
-    const sessions = $$('.sedit',form).map(el => { const q=n=>el.querySelector('[name="'+n+'"]'); const m=parseInt(q('min').value,10); return { id:el.dataset.sess, sport:q('sport').value, min:isFinite(m)?Math.max(0,Math.min(600,m)):null, ort:q('ort').value.trim(), details:q('details').value.trim(), alt:(q('alt')?q('alt').value.trim():''), done:!!q('done') }; });
+    const sessions = $$('.sedit',form).map(el => { const q=n=>el.querySelector('[name="'+n+'"]'); const m=parseInt(q('min').value,10); const old=(Array.isArray(d.sessions)?d.sessions:[]).find(x=>x.id===el.dataset.sess)||{}; return Object.assign({}, old, { id:el.dataset.sess, sport:q('sport').value, min:isFinite(m)?Math.max(0,Math.min(600,m)):null, ort:q('ort').value.trim(), details:q('details').value.trim(), alt:(q('alt')?q('alt').value.trim():''), done:!!old.done }); });
     const g = n => (form.elements[n]?.value ?? '').trim();
     const data = Object.assign({ title:g('title'), region:g('region'), sessions, nachmittag:g('nachmittag'), abend:g('abend'), notiz:g('notiz') }, stamp());
     if(!sensitiveGate(form, data.title,data.notiz,data.nachmittag,data.abend,...sessions.map(s=>s.ort+' '+s.details+' '+s.alt))) return false;
@@ -1893,7 +2046,7 @@ function editCheck(id){
 /* ================================================================ Erweiterung: Karte, Entdecken, Buchen, Listen */
 const LISTS = ['packliste','checkliste'];
 const LIST_LABEL = {packliste:'Packliste', checkliste:'Checkliste', budget:'Budget'};
-const BSEG = [['fluege','Flüge'],['hotels','Hotels'],['parken','Parken'],['vorab','Vorab']];
+const BSEG = [['fluege','Flüge'],['hotels','Hotels'],['parken','Parken'],['vorab','Vorab'],['kosten','Kosten']];
 Object.assign(S, {lastList:'packliste', bookSeg:'fluege', excFilter:'alle', excScroll:null});
 
 const enc = encodeURIComponent;
@@ -1989,10 +2142,7 @@ function geo(){
   const land = kmPath(G.phuket,true)+kmPath(G.main,true)+G.isl.map(p=>kmPath(p,true)).join('')+G.ell.map(ellPath).join('');
   let grat=''; for(let lo=97.5; lo<=99.01; lo+=0.1){ const a=P(lo,9.7), b=P(lo,7.7); grat+='M'+a[0].toFixed(1)+','+a[1].toFixed(1)+'V'+b[1].toFixed(1); }
   for(let la=7.7; la<=9.71; la+=0.1){ const a=P(97.4,la), b=P(99.1,la); grat+='M'+a[0].toFixed(1)+','+a[1].toFixed(1)+'H'+b[0].toFixed(1); }
-  const roads = G.roads.map(r=>kmPath(r,false)).join('');
-  const rts = MAPRTS.map(r=>'<path class="m-rt L-'+r.L+(r.boat?' boat':'')+(r.est?' est':'')+'" data-rl="'+r.L+'" id="rt-'+r.id+'" d="'+kmPath(r.pts,false)+'"/>').join('');
-  const hits = MAPRTS.map(r=>'<path class="m-hit" data-rl="'+r.L+'" data-rid="'+r.id+'" d="'+kmPath(r.pts,false)+'"/>').join('');
-  return GEO = {land, grat, roads, rts, hits};
+  return GEO = {land, grat};
 }
 const MSYMS = '<defs>'+Object.keys(MI).map(k=>'<symbol id="mi-'+k+'" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">'+MI[k]+'</g></symbol>').join('')+'</defs>';
 
@@ -2003,17 +2153,17 @@ function vMap(){
   const offs = Object.keys(LAYERS).filter(k=>!MV.layers[k]).map(k=>'off-'+k).join(' ');
   return '<div class="view mapview">'+
     '<div class="vh map-vh"><h1>Karte</h1><p class="muted small">Ziehen, zoomen, antippen – Details und Google Maps erscheinen unter der Karte.</p></div>'+
-    pre+lay+
+    pre+lay+mapTools()+
     '<div class="mapbox" id="mapbox">'+
       '<svg id="mapsvg" class="mapsvg '+offs+'" role="application" aria-label="Interaktive Karte. Liste der Punkte unter der Karte." xmlns="http://www.w3.org/2000/svg">'+MSYMS+
         '<rect class="m-sea" x="-5000" y="-5000" width="10000" height="10000"/>'+
-        '<g id="mgeo"><path class="m-grat" d="'+g.grat+'"/><path class="m-shoal" d="'+g.land+'"/><path class="m-land" d="'+g.land+'"/><path class="m-road" d="'+g.roads+'"/><g class="m-rts">'+g.rts+'</g><g class="m-hits">'+g.hits+'</g></g>'+
+        '<g id="mgeo"><path class="m-grat" d="'+g.grat+'"/><path class="m-shoal" d="'+g.land+'"/><path class="m-land" d="'+g.land+'"/></g>'+
         '<g id="mover"></g>'+
       '</svg>'+
       '<div class="map-ctl"><button class="icon-btn" data-act="map-zoom" data-z="1.8" aria-label="Hineinzoomen">+</button><button class="icon-btn" data-act="map-zoom" data-z="0.55" aria-label="Herauszoomen">−</button><button class="icon-btn" data-act="map-reset" aria-label="Ausschnitt zurücksetzen">'+micon('view',17)+'</button></div>'+
       '<div class="map-scale" id="mscale"><i></i><span></span></div>'+
     '</div>'+
-    '<p class="hint map-note">Vereinfachte Karte, Positionen ungefähr. Für die Navigation führt jeder Punkt zu Google Maps. Velo- und Laufwege sind schematisch – die Google-Maps-Route zeigt den echten Weg.</p>'+
+    '<p class="hint map-note">Vereinfachte Karte: Küste vereinfacht, Positionen ungefähr. Strecken erscheinen nur als nummerierte Wegpunkte – ohne gezeichnete Linie, denn geprüfte Tracks fehlen. Den echten Weg zeigt Google Maps; genaue Orte liefert der CSV-Export (Suchbegriff) in Google My Maps.</p>'+
     '<section class="card mapinfo" id="mapinfo" aria-live="polite"></section>'+
     '<section class="maplist" id="maplist" aria-label="Im Ausschnitt"></section>'+
   '</div>';
@@ -2041,15 +2191,13 @@ function mapGo(s,tx,ty,animate){
 }
 function zoomAt(f, x, y){ const s=clampS(MV.s*f); const k=s/MV.s; MV.tx = x-(x-MV.tx)*k; MV.ty = y-(y-MV.ty)*k; MV.s=s; }
 function focusPoint(p, minS){ const k=P(p.lon,p.lat); const s=clampS(Math.max(MV.s, minS||18)); mapGo(s, MV.w/2-k[0]*s, MV.h*0.45-k[1]*s, true); }
-function fitRoute(r){ let lo=[180,90,-180,-90]; r.pts.forEach(([x,y])=>{ lo=[Math.min(lo[0],x),Math.min(lo[1],y),Math.max(lo[2],x),Math.max(lo[3],y)]; }); const m=0.004; mapFit([lo[0]-m,lo[1]-m,lo[2]+m,lo[3]+m], true, 34); }
+function fitRoute(r){ let lo=[180,90,-180,-90]; (r.wp||[]).map(wpc).filter(Boolean).forEach(([x,y])=>{ lo=[Math.min(lo[0],x),Math.min(lo[1],y),Math.max(lo[2],x),Math.max(lo[3],y)]; }); const m=0.004; mapFit([lo[0]-m,lo[1]-m,lo[2]+m,lo[3]+m], true, 34); }
 
 let measCtx=null;
 function textW(t, bold){ try{ if(!measCtx){ measCtx=document.createElement('canvas').getContext('2d'); } measCtx.font=(bold?'600 ':'500 ')+'11.5px "IBM Plex Sans", system-ui, sans-serif'; return measCtx.measureText(t).width; }catch(e){ return t.length*6.4; } }
 function mapDraw(){
   const svg=document.getElementById('mapsvg'); if(!svg) return;
   const gg=document.getElementById('mgeo'); gg.setAttribute('transform','matrix('+MV.s.toFixed(4)+',0,0,'+MV.s.toFixed(4)+','+MV.tx.toFixed(1)+','+MV.ty.toFixed(1)+')');
-  $$('.m-rt.sel', svg).forEach(e=>e.classList.remove('sel'));
-  if(MV.sel && MV.sel.t==='r'){ const e=document.getElementById('rt-'+MV.sel.id); if(e){ e.classList.add('sel'); e.parentNode.appendChild(e); } }
   const W=MV.w, H=MV.h, s=MV.s, out=[], labels=[], boxes=[];
   const scr = (lon,lat) => { const k=P(lon,lat); return [k[0]*s+MV.tx, k[1]*s+MV.ty]; };
   boxes.push([W-58,0,W,160]);
@@ -2057,7 +2205,7 @@ function mapDraw(){
   MAPGEO.water.forEach(w=>{ if(w[3]==='small' && s<10) return; if(w[3]==='big' && s>14) return; const [x,y]=scr(w[1],w[2]); bg.push({x,y,t:w[0],cls:'water'+(w[3]?' '+w[3]:''),fs:w[3]==='big'?13:w[3]==='small'?10.5:11.5,sp:w[3]==='big'?2.6:.7}); });
   MAPGEO.land.forEach(w=>{ if(s>9) return; const [x,y]=scr(w[1],w[2]); bg.push({x,y,t:w[0],cls:'landl',fs:12,sp:2.9,up:true}); });
   if(s<9){ [['Woche 1 · Bang Tao',98.31,7.995],['Woche 2 · Khao Lak',98.262,8.66]].forEach(a=>{ const [x,y]=scr(a[1],a[2]); if(x<-100||x>W+100||y<-20||y>H+20) return; labels.push({x:x+16,y:y+4,t:a[0],cls:'area',pr:-1,anchor:'start',force:true}); }); }
-  const vis = MAPPTS.filter(p=>MV.layers[p.L] && !(p.L==='essen' && s<6 && !(MV.sel&&MV.sel.id===p.id))).map(p=>{ const [x,y]=scr(p.lon,p.lat); return {p,x,y}; }).filter(o=>o.x>-40&&o.x<W+40&&o.y>-40&&o.y<H+40);
+  const vis = MAPPTS.filter(p=>MV.layers[p.L] && ptVisible(p) && !(p.L==='essen' && s<6 && !(MV.sel&&MV.sel.id===p.id))).map(p=>{ const [x,y]=scr(p.lon,p.lat); return {p,x,y}; }).filter(o=>o.x>-40&&o.x<W+40&&o.y>-40&&o.y<H+40);
   const order = {base:0,info:1,ziel:2,weg:3,essen:4};
   vis.sort((a,b)=>(order[a.p.L]-order[b.p.L])||(a.p.z-b.p.z));
   const groups=[];
@@ -2075,6 +2223,7 @@ function mapDraw(){
     boxes.push([o.x-11,o.y-11,o.x+11,o.y+11]);
     if(g.sel || s>=p.z) labels.push({x:o.x, y:o.y, t:p.n, cls:g.sel?'sel':'', pr:g.sel?-2:p.z, mk:true});
   });
+  if(MV.sel && MV.sel.t==='r'){ const r=rtOf(MV.sel.id); if(r){ (r.wp||[]).map(x=>[x,wpc(x)]).filter(z=>z[1]).forEach(([raw,w],i)=>{ const [x,y]=scr(+w[0],+w[1]); mks.push([-1,2,'<g class="wpm L-'+r.L+'" transform="translate('+x.toFixed(1)+','+y.toFixed(1)+')"><circle r="10.5"/><text y="4" text-anchor="middle">'+(i+1)+'</text></g>']); boxes.push([x-11,y-11,x+11,y+11]); if(Array.isArray(raw) && w[2]) labels.push({x, y, t:w[2], cls:'wpl', pr:-3, mk:true}); }); } }
   mks.sort((a,b)=>(b[0]-a[0])||(a[1]-b[1])).forEach(m=>out.push(m[2]));
   labels.sort((a,b)=>a.pr-b.pr);
   const late=[];
@@ -2099,24 +2248,26 @@ function mapList(){ clearTimeout(listT); listT=setTimeout(mapListNow, 120); }
 function mapListNow(){
   const el=document.getElementById('maplist'); if(!el) return;
   const W=MV.w, H=MV.h, s=MV.s; const inView=(lon,lat)=>{ const k=P(lon,lat); const x=k[0]*s+MV.tx, y=k[1]*s+MV.ty; return x>=0&&x<=W&&y>=0&&y<=H; };
-  const pts = MAPPTS.filter(p=>MV.layers[p.L] && inView(p.lon,p.lat));
-  const rts = MAPRTS.filter(r=>MV.layers[r.L] && r.pts.some(q=>inView(q[0],q[1])));
+  const pts = MAPPTS.filter(p=>MV.layers[p.L] && ptVisible(p) && inView(p.lon,p.lat));
+  const rts = MV.fav||MV.day ? [] : MAPRTS.filter(r=>MV.layers[r.L] && (r.wp||[]).map(wpc).filter(Boolean).some(q=>inView(+q[0],+q[1])));
   const by={}; pts.forEach(p=>{ (by[p.L]=by[p.L]||[]).push('<button class="chip" data-act="map-sel" data-pt="'+p.id+'">'+micon(p.ic,15)+esc(p.n)+'</button>'); });
-  rts.forEach(r=>{ (by[r.L]=by[r.L]||[]).push('<button class="chip" data-act="map-sel" data-rt="'+r.id+'"><i class="rline L-'+r.L+(r.boat?' boat':'')+'"></i>'+esc(r.n)+'</button>'); });
+  rts.forEach(r=>{ (by[r.L]=by[r.L]||[]).push('<button class="chip" data-act="map-sel" data-rt="'+r.id+'"><i class="wpdot L-'+r.L+'">1</i>'+esc(r.n)+'</button>'); });
   const keys=Object.keys(LAYERS).filter(k=>by[k]);
   el.innerHTML = keys.length ? '<h2 class="ml-h">Im Ausschnitt</h2>'+keys.map(k=>'<div class="ml-g" style="--lc:var('+LAYERS[k].v+')"><h3>'+esc(LAYERS[k].label)+'</h3><div class="ml-items">'+by[k].join('')+'</div></div>').join('') : '<p class="muted small">In diesem Ausschnitt ist nichts eingeblendet.</p>';
 }
 function mapInfo(){
   const el=document.getElementById('mapinfo'); if(!el) return;
   const sel=MV.sel;
-  if(!sel){ el.innerHTML='<p class="muted small" style="margin:0">Tippe auf einen Punkt oder eine Linie. Zahlen in Kreisen fassen mehrere Punkte zusammen – antippen zoomt hinein.</p>'; el.classList.add('empty-info'); return; }
+  if(!sel){ el.innerHTML='<p class="muted small" style="margin:0">Tippe auf einen Punkt. Strecken wählst du in der Liste unter der Karte. Zahlen in Kreisen fassen mehrere Punkte zusammen – antippen zoomt hinein.</p>'; el.classList.add('empty-info'); return; }
   el.classList.remove('empty-info');
   const close='<button class="icon-btn" data-act="map-clear" aria-label="Details schliessen">×</button>';
   if(sel.t==='r'){
     const r=rtOf(sel.id); if(!r){ el.innerHTML=''; return; }
-    el.innerHTML='<div class="mi-h" style="--lc:var('+LAYERS[r.L].v+')"><i class="rline L-'+r.L+(r.boat?' boat':'')+'"></i><div><h3>'+esc(r.n)+'</h3><p class="muted small">'+esc(r.s)+(r.est?EST:'')+'</p></div>'+close+'</div>'+
-      '<p>'+esc(r.d)+'</p>'+
-      '<div class="mi-act">'+(r.g?ext(gmdir(r.g), r.L==='rad'?'Route in Google Maps (Velo)':r.L==='lauf'?'Route in Google Maps (zu Fuss)':'Route in Google Maps','btn'):'')+'<button class="btn ghost small" data-act="map-fitrt" data-rt="'+r.id+'">Ganze Linie zeigen</button></div>'+
+    const T=r.tr, st=T?(STATUS_R[T.status]||STATUS_R.ungeprueft):null, W=(r.wp||[]).map(wpc).filter(Boolean);
+    el.innerHTML='<div class="mi-h" style="--lc:var('+LAYERS[r.L].v+')"><i class="wpdot L-'+r.L+'">1</i><div><h3>'+esc(r.n)+'</h3><p class="muted small">'+esc(r.s||'')+'</p></div>'+close+'</div>'+
+      (st?'<p class="small"><span class="rstat rs-'+st[1]+'">'+st[0]+'</span> '+esc(T.stx)+'</p>':'')+'<p>'+esc(r.d||'')+'</p>'+
+      '<ol class="wplist">'+W.map(w=>'<li>'+esc(w[2]||'Wegpunkt')+'</li>').join('')+'</ol><p class="hint">Nur Wegpunkte, ungefähre Lage – keine gezeichnete Linie.</p>'+
+      '<div class="mi-act">'+(r.g?ext(gmdir(r.g), r.L==='rad'?'Route in Google Maps (Velo)':r.L==='lauf'?'Route in Google Maps (zu Fuss)':'Route in Google Maps','btn'):'')+(T&&T.gpx?ext(T.gpx,'GPX bei der Quelle'):'')+(window.__PUBLIC?'<button class="btn ghost small" data-act="map-gpx" data-rt="'+r.id+'">Wegpunkte (GPX)</button>':'')+(T?'<button class="btn ghost small" data-act="tr-route" data-id="'+r.id+'">Details</button>':'')+'</div>'+
       '<div class="srcs">'+srcLinks(r.src)+'</div>';
     return;
   }
@@ -2137,7 +2288,7 @@ function mapInfo(){
     body=(p.d?'<p>'+esc(p.d)+'</p>':'');
     act=ext(gmq(p.q||p.n),'Google Maps','btn')+(p.L==='ziel'?ext(gimg(p.q||p.n),'Fotos'):'');
   }
-  el.innerHTML='<div class="mi-h" style="--lc:var('+LAYERS[p.L].v+')"><span class="mi-ic">'+micon(p.ic,18)+'</span><div><h3>'+esc(p.n)+'</h3><p class="muted small">'+esc(p.s||LAYERS[p.L].label)+'</p></div>'+close+'</div>'+body+'<div class="mi-act">'+act+'</div>'+(srcs&&srcs.length?'<div class="srcs">'+srcLinks(srcs)+'</div>':'');
+  el.innerHTML='<div class="mi-h" style="--lc:var('+LAYERS[p.L].v+')"><span class="mi-ic">'+micon(p.ic,18)+'</span><div><h3>'+esc(p.n)+'</h3><p class="muted small">'+esc(p.s||LAYERS[p.L].label)+'</p></div>'+close+'</div>'+body+'<div class="mi-act">'+act+'<button class="btn ghost small" data-act="fav-toggle" data-pt="'+p.id+'" aria-pressed="'+FAVS.has(p.id)+'">'+(FAVS.has(p.id)?'★ Gemerkt':'☆ Merken')+'</button></div>'+(srcs&&srcs.length?'<div class="srcs">'+srcLinks(srcs)+'</div>':'');
 }
 function goLine(g){ if(!g) return ''; return '<div class="exc-go"><span class="go-ic">'+goIcon(g.m)+'</span><span><b>'+esc(GO_LBL[g.m]||'Anreise')+':</b> '+esc(g.t)+(g.est?EST:'')+'</span></div>'; }
 
@@ -2267,17 +2418,20 @@ function vFlights(){
 }
 function chosenHotel(w){ const b=itemOf('bookings', STAY[w].bk); return b&&b.variant?b.variant:null; }
 function vHotels(){
-  const head='<div class="vh"><h1>Unterkünfte wählen</h1><p class="muted small">Je Woche ein paar Varianten: günstig, nahe am Strand oder an Läden, mit Pool und wenn möglich Gym. Preise sind Richtwerte – im Februar ist Hochsaison.</p></div>';
-  const sec = w => { const chosen=chosenHotel(w); const st=STAY[w];
+  const head='<div class="vh"><h1>Unterkünfte wählen</h1><p class="muted small">Pro Region die Top 3 nach deinen Kriterien: Strand 5–10 Min. zu Fuss, Restaurants in der Nähe, ruhig, guter Start fürs Training, Budget CHF 40–80 pro Nacht. Gefundene Preise und Schätzungen sind getrennt markiert.</p></div>';
+  const card = (H, st, chosen) => { const on=chosen===H.id; const p=ptOf(H.id);
+    const dist = H.w==='w1' && p ? [['Siam Bike Tours','sbt'],['Thanyapura','thanya']].map(([l,id])=>{ const q=ptOf(id); return q? l+' '+kmB([p.lon,p.lat],[q.lon,q.lat]).toFixed(1).replace('.',',')+' km':''; }).filter(Boolean).join(' · ')+' (Luftlinie)' : '';
+    const tot = H.usd ? '<span class="tot">'+st.nights+' Nächte: '+(H.usd[0]===H.usd[1]?'USD '+H.usd[0]*st.nights:'USD '+H.usd[0]*st.nights+'–'+H.usd[1]*st.nights)+' ≈ '+fmtCHF(H.usd[0]*st.nights*FXC.usd)+(H.usd[0]===H.usd[1]?'':'–'+fmtCHF(H.usd[1]*st.nights*FXC.usd).replace('CHF ',''))+'</span>'+(H.pv?'<span class="badge ok">gefundener Februar-Preis</span>':EST) : '';
+    return '<article class="ht card'+(on?' chosen':'')+'" id="h-'+H.id+'"><div class="ht-top"><div><span class="ht-tag">'+(H.top?'<b class="topn">Top '+H.top+'</b> ':'')+esc(H.tag)+'</span><h3>'+esc(H.name)+'</h3><p class="muted small">'+esc(H.kind)+'</p></div></div>'+
+      '<p>'+esc(H.lage)+'</p>'+(dist?'<p class="small muted">Distanz: '+esc(dist)+'</p>':'')+'<div class="feats"><span class="feat">'+esc(H.pool)+'</span><span class="feat'+(/^Kein/.test(H.gym)?' no':'')+'">'+esc(H.gym)+'</span><span class="feat soft">'+esc(H.extra)+'</span></div>'+
+      '<p class="ht-price"><b>'+esc(H.price)+'</b><span class="muted small">'+esc(H.priceNote)+'</span>'+tot+'</p>'+(H.warn?'<p class="warnline">'+esc(H.warn)+'</p>':'')+pmList(H.plus,H.minus)+
+      '<div class="fl-act">'+ext(bookingUrl(H.q,st.from,st.to),'Booking.com','btn')+ext(gmq(H.q),'Google Maps')+ext(gimg(H.q),'Bilder')+'<button class="btn ghost small" data-act="map-focus" data-pt="'+H.id+'">Auf der Karte</button>'+
+        (on?'<span class="badge rec">✓ gewählt</span>':(canManage()?'<button class="btn ghost small" data-act="ht-pick" data-id="'+H.id+'">Als Wahl übernehmen</button>':''))+'</div>'+
+      '<div class="srcs">'+srcLinks(H.src)+'</div></article>'; };
+  const sec = (w, areas) => { const chosen=chosenHotel(w); const st=STAY[w];
     return '<section class="ht-sec"><div class="sec-h"><h2>'+esc(st.label)+'</h2><span class="muted">'+esc(fmtRange(st.from,st.to))+' · '+st.nights+' Nächte</span></div>'+
-      HOTELS.filter(h=>h.w===w).map(H=>{ const on=chosen===H.id;
-        return '<article class="ht card'+(on?' chosen':'')+'" id="h-'+H.id+'"><div class="ht-top"><div><span class="ht-tag">'+esc(H.tag)+'</span><h3>'+esc(H.name)+'</h3><p class="muted small">'+esc(H.kind)+'</p></div></div>'+
-          '<p>'+esc(H.lage)+'</p><div class="feats"><span class="feat">'+esc(H.pool)+'</span><span class="feat'+(/^Kein/.test(H.gym)?' no':'')+'">'+esc(H.gym)+'</span><span class="feat soft">'+esc(H.extra)+'</span></div>'+
-          '<p class="ht-price"><b>'+esc(H.price)+'</b><span class="muted small">'+esc(H.priceNote)+'</span></p>'+pmList(H.plus,H.minus)+
-          '<div class="fl-act">'+ext(bookingUrl(H.q,st.from,st.to),'Booking.com','btn')+ext(gmq(H.q),'Google Maps')+'<button class="btn ghost small" data-act="map-focus" data-pt="'+H.id+'">Auf der Karte</button>'+
-            (on?'<span class="badge rec">✓ gewählt</span>':(canManage()?'<button class="btn ghost small" data-act="ht-pick" data-id="'+H.id+'">Als Wahl übernehmen</button>':''))+'</div>'+
-          '<div class="srcs">'+srcLinks(H.src)+'</div></article>'; }).join('')+'</section>'; };
-  return head+sec('w1')+sec('w2');
+      areas.map(a=>{ const L=HOTELS.filter(h=>h.w===w && (h.area||'bt')===a).sort((x,y)=>(x.top||9)-(y.top||9)); return L.length?'<h3 class="area-h">'+esc(AREAS[a])+'</h3>'+L.map(H=>card(H,st,chosen)).join(''):''; }).join('')+'</section>'; };
+  return head+sec('w1',['bt','ny'])+sec('w2',['kl'])+'<p class="hint">USD in CHF mit 1 USD ≈ '+String(FXC.usd).replace('.',',')+' CHF. «Bilder» öffnet eine Google-Bildersuche.</p>';
 }
 function vPark(){
   const tpl = canManage() ? '<button class="btn ghost small" data-act="bk-tpl" data-x="park">Als Buchung erfassen</button>' : '';
@@ -2301,6 +2455,7 @@ function vAdvance(){
 }
 function vBookingsExt(){
   const seg=bookSeg();
+  if(S.bookSeg==='kosten') return '<div class="view">'+storeBanner()+seg+vCosts()+'</div>';
   if(S.bookSeg==='liste'){ return vBookings().replace('<div class="view">','<div class="view">'+seg); }
   const body = S.bookSeg==='fluege'?vFlights():S.bookSeg==='hotels'?vHotels():S.bookSeg==='parken'?vPark():vAdvance();
   return '<div class="view">'+storeBanner()+seg+body+'</div>';
@@ -2344,6 +2499,690 @@ function extAfter(){
   if(LISTS.includes(S.view)) S.lastList=S.view;
 }
 function extKeep(){ if(S.view==='karte' && MV.view==='karte' && document.getElementById('mapsvg')){ mapDraw(); mapInfo(); return true; } return false; }
+
+/* ================================================================ Trainingslager · Standort · Daten (Stand 9.11.2026) */
+Object.assign(SRC, {
+  c_sbt:['Siam Bike Tours (franco-media)','https://www.franco-media.com/en/?p=273605'],
+  c_bt_rent:['Bicycle Thailand: Velomiete Phuket','https://bicyclethailand.com/bicycle-rentals-phuket-thailand/'],
+  c_c2c:['Geführte 50-km-Tour (Luxury Escapes)','https://luxuryescapes.com/us/experience/half-day-guided-road-cycling-tour-through-phukets-tropical-east-and-west/led:006RF00000KI2npYAD'],
+  c_pxg_cyc:['Phuket Expat Guide: Radfahren (2026)','https://phuketexpatguide.pages.dev/blog/phuket-cycling-guide-expat/'],
+  c_pxg_clubs:['Phuket Expat Guide: Clubs (2026)','https://phuketexpatguide.pages.dev/blog/phuket-running-cycling-clubs/'],
+  c_pxg_routes:['Phuket Expat Guide: Rennrad-Routen','https://phuketexpatguide.pages.dev/blog/phuket-road-cycling-routes-training/'],
+  c_pxg_run:['Phuket Expat Guide: Lauf- und Radrouten','https://phuketexpatguide.pages.dev/blog/running-cycling-routes-phuket/'],
+  c_pxg_pools:['Phuket Expat Guide: Becken & Tagespässe (2026)','https://phuketexpatguide.com/blog/phuket-swimming-laps-fitness-pools/'],
+  c_komoot_pw:['komoot: Pak-Weep-Runde ab Thalang','https://www.komoot.com/smarttour/37386262'],
+  c_komoot_quiet:['komoot: ruhige Nebenstrasse im Norden','https://www.komoot.com/highlight/7146015'],
+  c_centara:['Centara: Radfahren in Phuket','https://www.centarahotelsresorts.com/journal/cycling-in-phuket'],
+  c_bt_safety:['Bicycle Thailand: Thepkrasattri Road','https://bicyclethailand.com/its-everyones-job-to-improve-cyclists-safety/'],
+  c_bm_thalang:['bikemap: Thalang-Runde','https://www.bikemap.net/en/r/3811046'],
+  c_220tri:['220 Triathlon: Thanyapura (2018)','https://www.pressreader.com/uk/220-triathlon-magazine/20180125/282269550813185'],
+  c_thanya_faq:['Thanyapura: FAQ','https://www.thanyapura-phuket.com/journey/senior/'],
+  c_thanya_squad:['Thanyapura: Tri Performance Squad','https://www.thanyapura-phuket.com/package/tri-performance-squad/'],
+  c_thanya_mt:['Marathon Tours: Thanyapura','https://marathontours.com/en-gb/?p=7884'],
+  c_thanya_sb:['Sportive Breaks: Thanyapura','https://sportivebreaks.com/?p=54202'],
+  c_thanya_17:['Tri-Alliance 2017: Anlagen Thanyapura','https://vic.tri-alliance.com/?p=24535'],
+  c_thanya_dp:['DayPass-App: Thanyapura','https://book.daypassapp.com/thailand/phuket/thanyapura-day-pass-phuket'],
+  c_thanya_hft:['Health & Fitness Travel: Thanyapura','https://www.healthandfitnesstravel.com/?p=17772'],
+  c_swg_thanya:['SwimmersGuide: Thanyapura (2022)','https://www.swimmersguide.com/locations/22435'],
+  c_nh_dp:['NH Boat Lagoon: Day Pass','https://world.nh-hotels.com/en/nh-boat-lagoon-phuket/day-pass'],
+  c_giant:['The Pro’s Closet: Grössentabelle Giant TCR','https://www.theproscloset.com/collections/giant-tcr-advanced-size-chart'],
+  c_giant_spec:['Giant TCR Advanced 2: Kurbellängen','https://www.tayjunction.com.sg/products/giant-tcr-advanced-2-2024'],
+  c_thaipbs:['Thai PBS World: Strassen in Khao Lak (2024)','https://www.thaipbsworld.com/?p=320989'],
+  c_mh_kl:['MileHacker: Unterwegs in Khao Lak','https://www.milehacker.com/travel/thailand/andaman-coast/khao-lak/getting-around-khao-lak-public-transport-taxis-car/'],
+  c_bb_kl:['BikesBooking: Velo in Khao Lak','https://bikesbooking.com/en/rent-a-bicycle-in-Khao-Lak'],
+  c_bm_kl:['bikemap: Routen Khao Lak','https://www.bikemap.net/en/l/1157190'],
+  c_hh_roadies:['Wanderlog: Hua Hin Roadies','https://wanderlog.com/place/details/11335005/hua-hin-roadies-road-bike-rental'],
+  c_pranburi:['Aleenta: Veloweg Pranburi','https://www.aleenta.com/en/aleenta-hua-hin-pranburi/experiences/cycling-in-pranburi/'],
+  c_hh_danger:['komoot: Veloweg nach Hua Hin','https://www.komoot.com/highlight/7840892'],
+  c_truearena:['The Nation: True Arena (2016)','https://www.nationthailand.com/life/30284978'],
+  c_evason:['SwimmersGuide: Evason Hua Hin','https://www.swimmersguide.com/locations/29645'],
+  c_krabi_bm:['bikemap: Routen ab Ao Nang','https://www.bikemap.net/en/r/1961678'],
+  c_krabi_eco:['komoot: Krabi Eco Cycle (2024)','https://www.komoot.com/highlight/677640'],
+  c_krabi_mh:['MileHacker: Unterwegs in Ao Nang','https://www.milehacker.com/travel/thailand/andaman-coast/ao-nang/getting-around-ao-nang-public-transport-taxis-car-/'],
+  c_lanta_bt:['Bicycle Thailand: Velomiete Koh Lanta','https://bicyclethailand.com/january-february-2017-reader-mail-tridash-road-bike-rentals-mtb-rentals-on-koh-lanta-and-bangkoks-newest-cycling-park/'],
+  c_lanta_thaiger:['The Thaiger: Rennrad auf Lanta (2018)','https://thethaiger.com/thai-life/phuket-explore-canter-around-lanta-blazing-saddles'],
+  c_lanta_mh:['MileHacker: Unterwegs auf Ko Lanta','https://www.milehacker.com/travel/thailand/andaman-coast/ko-lanta/getting-around-ko-lanta-public-transport-taxis-car/'],
+  c_ny_pxg:['Phuket Expat Guide: Nai Yang Beach','https://phuketexpatguide.pages.dev/blog/nai-yang-beach-phuket/'],
+  c_ny_atlas:['Beach Atlas: Nai Yang (2026)','https://www.beachatlas.com/nai-yang-beach-phuket-your-2026-visitor-guide-1790427861090'],
+  c_ny_wop:['Window on Phuket: Nai Yang','https://www.windowonphuket.com/best-beaches/nai-yang-beach'],
+  c_ny_thg:['Thai Holiday Guide: Nai Yang','https://thaiholidayguide.com/visit/nai-yang'],
+  c_ny_gps:['Penang Travel Tips: Nai Yang (GPS)','https://www.penang-traveltips.com/thailand/phuket/nai-yang-beach.htm'],
+  c_h_nyr_kayak:['KAYAK: Nai Yang Beach Resort','https://www.kayak.com/Sakhu-Hotels-Nai-Yang-Beach-Resort-Spa.301947.ksp'],
+  c_h_nyr_exp:['Expedia: Nai Yang Beach Resort','https://www.expedia.com/Phuket-Hotels-Nai-Yang-Beach-Resort-Spa.h2995113.Hotel-Information'],
+  c_h_nyr_oyster:['Oyster: Nai Yang Beach Resort','https://www.oyster.com/?p=109321'],
+  c_h_ny_bk:['Booking.com: Hotels in Nai Yang','https://www.booking.com/city/th/nai-yang-beach.html?aid=839822'],
+  c_h_ny_tap:['TAP Hotels: Nai Yang','https://hotels.flytap.com/city/th/nai-yang-beach.html?aid=304142'],
+  c_h_disc_kayak:['KAYAK: Naiyang Discovery','https://www.kayak.com/Sakhu-Hotels-Naiyang-Discovery-Beach-Resort.711814.ksp'],
+  c_h_btv_trav:['Travelocity: Bangtao Village Resort','https://www.travelocity.com/Phuket-Hotels-Bangtao-Village-Resort.h1780863.Hotel-Information'],
+  c_h_btv_exp:['Expedia: Bangtao Village Resort','https://www.expedia.com.sg/h1780863.Hotel-Information'],
+  c_h_ntb:['Dinogo: Nang Thong Bay Resort','https://dinogo.com/hotels/24596-nang-thong-bay-beach-resort'],
+  c_h_bhandari:['Expedia: Khaolak Bhandari','https://www.expedia.co.th/en/Takua-Pa-Hotels-Khaolak-Bhandari-Resort-Spa.h2540811.Hotel-Information'],
+  c_h_baankl:['Expedia: Baan Khao Lak Resort','https://expedia.com.au/Takua-Pa-Hotels-Baan-Khao-Lak-Resort.h2421358.Hotel-Information'],
+  c_scoot:['Phuket 101: Roller mieten','https://www.phuket101.net/renting-a-motorbike-in-phuket/'],
+  c_dom:['Expedia: Flüge Bangkok–Phuket','https://www.expedia.co.th/en/lp/flights/bkk/hkt/bangkok-to-phuket'],
+  c_fx:['ValutaFX: CHF/THB (Juli 2026)','https://www.valutafx.com/history/chf-thb-2026-07-22'],
+  c_fx_eur:['exchange-rates.org: EUR/CHF (2.10.2026)','https://www.exchange-rates.org/exchange-rate-history/chf-eur-2026-10-02'],
+  c_fx_usd:['ValutaFX: USD/CHF (4.8.2026)','https://www.valutafx.com/history/usd-chf-2026-08-04']
+});
+
+const CAMP_ASOF = '9.11.2026';
+const FXC = { thb:41, eur:0.93, usd:0.81, src:['c_fx','c_fx_eur','c_fx_usd'] }; // THB pro CHF · CHF pro EUR · CHF pro USD (Richtwerte)
+
+/* ---------------------------------------------------------------- Standortanalyse */
+const CRIT = [
+  { k:'train', w:40, label:'Training', sub:[['rad','Rennrad-Miete'],['strecke','Sichere Strecken 50–120 km'],['pool','25-/50-m-Becken'],['lauf','Laufen ab Hotel'],['indoor','Indoor & Gruppen']] },
+  { k:'ferien', w:40, label:'Strand & Ferien', sub:[['baden','Angenehm baden (Feb.)'],['nah','Strand & Restaurants zu Fuss'],['ruhe','Ruhig, nicht abgelegen'],['ausfl','Tages- & Rollerausflüge']] },
+  { k:'kosten', w:20, label:'Kosten & Anreise', sub:[['preis','Hotels im Budget'],['transfer','Weg ab Flughafen'],['flug','Flüge ab ZRH/MXP']] }
+];
+const REGS = [
+  { id:'pn', n:'Phuket-Nord', sub:'Bang Tao/Layan oder Nai Yang', now:true,
+    sc:{rad:5,strecke:4,pool:5,lauf:4,indoor:3, baden:4,nah:4,ruhe:3,ausfl:5, preis:3,transfer:5,flug:5},
+    why:{ train:'Carbon-Mietvelo bei Siam Bike Tours, zwei 50-m-Becken (Thanyapura, NH Boat Lagoon), Gruppenfahrten. Ruhig sind die Strassen vor allem früh und im Norden; die Thepkrasattri Road ist bei Stossverkehr gefährlich. Ein Studio mit Smart-Trainern habe ich nicht gefunden.',
+          ferien:'Im Februar meist ruhiges Wasser. Bang Tao ist belebter, Nai Yang lokal und ruhig (Riff, flach; gelegentlich Fluglärm). Viele Ausflüge in der Nähe.',
+          kosten:'Strandhotels in Bang Tao liegen im Februar meist über dem Budget, Nai Yang ist günstiger. Flughafen 10–30 Min.' },
+    src:['c_sbt','c_pxg_clubs','c_pxg_pools','c_nh_dp','c_bt_safety','c_ny_pxg','c_ny_atlas','h_andaman_hc'] },
+  { id:'kl', n:'Khao Lak', sub:'Nang Thong / Bang Niang', now:true,
+    sc:{rad:1,strecke:2,pool:1,lauf:4,indoor:1, baden:5,nah:4,ruhe:5,ausfl:5, preis:3,transfer:3,flug:4},
+    why:{ train:'Keinen Rennradverleih gefunden. Die Route 4 wird ausgebaut; Sicherheit für Velofahrer ist dort ein Thema. Kein 25-/50-m-Becken gefunden. Laufen und Freiwasser im Meer gehen gut.',
+          ferien:'Lange, ruhige Strände; in Bang Niang und Nang Thong liegen Restaurants und Markt zu Fuss. Similan und Khao Sok in Reichweite.',
+          kosten:'Februar ist Hochsaison. Flughafen Phuket ca. 70 Min. Fahrt.' },
+    src:['c_thaipbs','c_mh_kl','c_bb_kl','c_h_bhandari','h_koko_kayak'] },
+  { id:'hh', n:'Hua Hin', sub:'Golf von Thailand',
+    sc:{rad:4,strecke:3,pool:2,lauf:3,indoor:3, baden:3,nah:4,ruhe:2,ausfl:3, preis:3,transfer:2,flug:3},
+    why:{ train:'Carbon-Miete (Hua Hin Roadies), 25 km Veloweg in Pranburi. Aber: Warnung vor einem «sehr gefährlichen» Veloweg nach Hua Hin. Nur ein 25-m-Dachpool (True Arena) bzw. ein 50-m-Abschnitt im Hotelpool (Evason).',
+          ferien:'Badebedingungen im Februar habe ich nicht geprüft. Hua Hin ist eine belebte Stadt.',
+          kosten:'Kein Flug nach Phuket – ab Bangkok rund 3 Std. auf der Strasse (Schätzung).' },
+    src:['c_hh_roadies','c_pranburi','c_hh_danger','c_truearena','c_evason'] },
+  { id:'kr', n:'Krabi / Ao Nang', sub:'Andamanensee',
+    sc:{rad:2,strecke:3,pool:2,lauf:3,indoor:1, baden:4,nah:4,ruhe:2,ausfl:5, preis:3,transfer:3,flug:3},
+    why:{ train:'Keinen seriösen Rennradverleih bestätigt (ein Anbieter war 2024 nicht auffindbar). Ruhige Nebenstrassen gibt es, Hauptstrassen sind gefährlich. Becken nicht geprüft.',
+          ferien:'Kalkfelsen und Inseln; Ao Nang selbst ist belebt.',
+          kosten:'Flug nach Krabi via Bangkok oder Phuket plus Strasse.' },
+    src:['c_krabi_eco','c_krabi_mh','c_krabi_bm'] },
+  { id:'lt', n:'Koh Lanta', sub:'Insel bei Krabi',
+    sc:{rad:1,strecke:1,pool:1,lauf:3,indoor:1, baden:5,nah:3,ruhe:5,ausfl:4, preis:3,transfer:1,flug:3},
+    why:{ train:'Nur einfache Mietvelos, Strassen teils schlecht (2018: Mountainbike empfohlen), keine Velostreifen. Kein Becken gefunden.',
+          ferien:'Sehr ruhig, schöne Strände.',
+          kosten:'Lange Anreise mit Strasse und Fähre (Schätzung 3–4 Std.).' },
+    src:['c_lanta_bt','c_lanta_thaiger','c_lanta_mh'] }
+];
+const COMBOS = [
+  { id:'a', n:'Phuket-Nord 7 + Khao Lak 5', rec:true, parts:[['pn',7],['kl',5]], note:'Empfehlung: dein Hauptblock bleibt vollwertig, die ruhigeren Strandtage finden in Khao Lak statt.' },
+  { id:'b', n:'Phuket-Nord 6 + Khao Lak 6', now:true, parts:[['pn',6],['kl',6]], note:'Bisheriger Plan. Ein Trainingstag weniger mit Velo und 50-m-Becken.' },
+  { id:'c', n:'Nur Phuket-Nord (12 Nächte)', parts:[['pn',12]], note:'Rechnerisch knapp vorne, weil Khao Lak fürs Training wenig bietet – aber deine Frau verzichtet auf den ruhigsten Strand. Möglich: zweite Hälfte in Nai Yang.' }
+];
+const DECIDE = {
+  verdict:'Die bisherige Route bleibt: Phuket-Nord für das Training, Khao Lak für die Ferien.',
+  why:'Keine Alternative ist klar besser. Phuket-Nord ist mit Abstand der beste Trainingsort, Khao Lak der schönste ruhige Ferienort. Hua Hin, Krabi und Koh Lanta sind in beiden Bereichen schwächer.',
+  nights:'Empfehlung 7 + 5 Nächte statt 6 + 6. Die 8–9 + 5–6 aus deiner Vorgabe gehen mit 12 Nächten nicht auf.',
+  hotels:'Phuket: Bang Tao/Layan (Velo-Shop und Gruppen vor Ort) oder Nai Yang (ruhiger, günstiger, kurzer Weg zu den ruhigen Strassen im Norden). Khao Lak: Nang Thong oder Bang Niang.',
+  wife:'Khao Lak (4,8 von 5 bei Strand & Ferien): lange, ruhige Strände, Restaurants zu Fuss, Similan. Zweitbeste: Koh Lanta – aber mit langer Anreise und ohne Training.',
+  him:'Phuket-Nord (4,2 von 5 beim Training): Carbon-Velo, zwei 50-m-Becken, 500-m-Laufbahn, Gruppen.',
+  change:'Geändert habe ich nichts an Route und Tagen. Wenn ihr 7 + 5 wollt, verschiebe ich Umzugstag und Trainingsplan.',
+  plus:['Training und Ferien je am stärksten Ort','Kurzer Transfer nach der Ankunft','Velo-Shop (Boat Avenue) nahe Bang Tao','Ruhiger Ausklang in Khao Lak nach dem Trainingsblock','Similan ab Khao Lak am nächsten'],
+  minus:['Nur 6 Nächte Trainingsbasis, davon Ankunfts- und Umzugstag','In Khao Lak kein Rennradverleih, Route 4 heikel – Woche 2 fast ohne Velo','Kein 25-/50-m-Becken in Khao Lak gefunden','Strandhotels in Bang Tao im Februar meist über Budget (z. B. USD 168 pro Nacht)','Am Abreisetag ca. 70 Min. bis zum Flughafen'],
+  qa:[
+    {q:'Wie gut ist das Rennradfahren?', pn:'Gut, wenn du früh startest: Szene mit Clubs, Gruppen und Triathlon-Runden.', kl:'Eingeschränkt: Hauptachse Route 4, ruhige Nebenstrassen nur zwischen den Stränden.', src:['c_pxg_cyc','c_pxg_clubs','c_mh_kl','c_bb_kl']},
+    {q:'Sichere Strecken 50–120 km?', pn:'Ja: Nordküste bis Sarasin-Brücke (vor 7 Uhr), Pak-Weep-Runde 108 km auf ruhiger Strasse (komoot).', kl:'Keine geprüfte; bikemap-Touren nutzen teils die Route 4.', src:['c_pxg_clubs','c_centara','c_komoot_pw','c_komoot_quiet','c_thaipbs']},
+    {q:'Seriöser Rennradverleih?', pn:'Siam Bike Tours: Giant TCR Advanced 2 (Carbon, 105) für 2’000 THB/Tag inkl. Fitting. Wochenpreis, Kaution und frühe Übernahme erfragen.', kl:'Keinen gefunden – Velo aus Phuket mitnehmen.', src:['c_sbt','c_bt_rent','c_pxg_cyc']},
+    {q:'25-/50-m-Becken?', pn:'Thanyapura 50 m (8 Bahnen) und NH Boat Lagoon 50 m mit Tagespass; 25 m in Phuket Town.', kl:'Keines gefunden – Meer (im Februar ruhig) und Hotelpool.', src:['c_pxg_pools','c_thanya_mt','c_nh_dp']},
+    {q:'Laufen ab Hotel?', pn:'Strand Bang Tao bei Ebbe, Nai Yang Strand (rund 2 km); 500-m-Bahn in Thanyapura. Laguna-Wege nicht geprüft.', kl:'Gut: lange Strände, Runde Bang Niang – Leuchtturm.', src:['c_ny_pxg','c_thanya_mt']},
+    {q:'Hotels für beide?', pn:'Ja, aber am Strand von Bang Tao im Februar meist über Budget; Nai Yang hat Strandhotels im Budget-Bereich.', kl:'Ja: Nang Thong und Bang Niang mit Strand und Restaurants zu Fuss.', src:['h_andaman_hc','c_h_ny_bk','c_h_ntb','c_h_bhandari']},
+    {q:'Strand und Restaurants zu Fuss?', pn:'Je nach Hotel; Nai Yang hat Seafood-Lokale unter Bäumen direkt am Strand.', kl:'Ja, besonders Bang Niang (Markt) und Nang Thong.', src:['c_ny_wop','c_h_bhandari']},
+    {q:'Preis-Leistung?', pn:'Bang Tao teuer, Nai Yang deutlich günstiger.', kl:'Mittel; Februar ist laut KAYAK der teuerste Monat.', src:['h_andaman_hc','c_h_nyr_kayak','h_koko_kayak']}
+  ]
+};
+
+/* ---------------------------------------------------------------- Infrastruktur */
+const FAC = [
+  { id:'f_sbt', k:'velo', w:'w1', n:'Siam Bike Tours', pt:'sbt', addr:'Boat Avenue, 21/9 Lagoon Rd, Cherngtalay', web:'https://www.siambiketours.com', tel:'+66 76 324 211',
+    price:'Giant TCR Advanced 2 KOM (Carbon, Shimano 105): 2’000 THB pro Tag, Fitting inklusive, Versicherung optional', hours:'Geführte Touren täglich ab 9:00 im Shop; Ladenöffnung erfragen',
+    feb:'Online nicht prüfbar – früh reservieren', tr:'Ab Bang Tao zu Fuss oder kurz mit dem Roller',
+    req:['Rahmengrösse M anfragen – laut Giant-Tabelle (171–187 cm) passend zu deiner Grösse; Kurbel 172,5 mm','Eigene Rally-Pedale montieren lassen','Mehrere Tage am Stück mieten und am Vorabend übernehmen, damit du um 6 Uhr ab Hotel startest','Wochenpreis, Kaution, Velo nach Khao Lak mitnehmen?'],
+    src:['c_sbt','c_bt_rent','c_giant','c_giant_spec'] },
+  { id:'f_thanya', k:'pool', w:'w1', n:'Thanyapura (50-m-Becken, Bahn, Spinning)', pt:'thanya', addr:'120/1 Moo 7, Thepkasattri Rd, Thalang', web:'https://www.thanyapura-phuket.com',
+    price:'Tagespass 500–700 THB (2026; 2022 waren es 900 THB). Tri-Squad 2’000 THB pro Woche oder 500 THB pro Training', hours:'Anlagen 7–21 Uhr (FAQ)',
+    feb:'Laut FAQ für Mitglieder und Hotelgäste; Tagespass über die DayPass-App. 50-m-Bahnen nur mit Reservation.', tr:'Taxi oder Roller ca. 20–25 Min. ab Bang Tao oder Nai Yang (Schätzung)',
+    req:['Tagespass vorher reservieren und Zugang bestätigen lassen','8 Bahnen, 26–29 °C; zusätzlich 25-m-Becken und 500-m-Laufbahn','Spinning-Raum (kein Smart-Trainer); 2017 gab es einen CompuTrainer-Raum – aktuell erfragen'],
+    src:['c_pxg_pools','c_swg_thanya','c_thanya_faq','c_thanya_dp','c_thanya_sb','c_thanya_squad','c_thanya_mt','c_thanya_17','c_thanya_hft'] },
+  { id:'f_nh', k:'pool', w:'w1', n:'NH Boat Lagoon (50-m-Becken)', pt:'nhbl', addr:'Boat Lagoon, Koh Kaew (Ostküste)', web:'https://world.nh-hotels.com/en/nh-boat-lagoon-phuket/day-pass',
+    price:'Day Pass ab 300–400 THB inkl. 300 THB Essensguthaben', hours:'Zeiten beim Hotel erfragen', feb:'Verfügbarkeit erfragen', tr:'Auto/Taxi ca. 30–40 Min. ab Bang Tao (Schätzung)',
+    req:['Ausweichoption, falls Thanyapura keinen Tagespass gibt'], src:['c_nh_dp','c_pxg_pools'] },
+  { id:'f_surakul', k:'pool', w:'w1', n:'Surakul-Stadion (25 m)', pt:'surakul', addr:'Phuket Town', web:'',
+    price:'50–80 THB', hours:'Zeiten vor Ort erfragen', feb:'öffentlich', tr:'Auto/Taxi ca. 40 Min. (Schätzung)', req:['Weit weg – nur als Notlösung'], src:['c_pxg_pools'] },
+  { id:'f_saphan', k:'pool', w:'w1', n:'Saphan Hin (25 m)', pt:'saphanhin', addr:'Phuket Town (Süd)', web:'',
+    price:'50–80 THB', hours:'Zeiten vor Ort erfragen', feb:'öffentlich', tr:'Auto/Taxi ca. 45 Min. (Schätzung)', req:['Weit weg – nur als Notlösung'], src:['c_pxg_pools'] },
+  { id:'f_groups', k:'gruppe', w:'w1', n:'Gruppenfahrten', pt:'sbt', addr:'Treffpunkte vor Ort erfragen', web:'',
+    price:'meist gratis', hours:'Laguna Triathlon Club: Wochenende 6 Uhr · Phuket Road Riders: Sa 5:45 · TBAC: ab Bang Tao/Laguna Richtung Norden · Thanyapura: organisierte Ausfahrten',
+    feb:'Zeiten können sich ändern – vor Ort bestätigen', tr:'Laguna/Bang Tao: mit dem Velo', req:['Helm Pflicht, Licht für Starts vor Sonnenaufgang (ca. 6:45)'], src:['c_pxg_clubs','c_pxg_cyc'] },
+  { id:'f_indoor', k:'indoor', w:'w1', n:'Smart-Trainer / Wattbike', pt:'thanya', addr:'–', web:'',
+    price:'–', hours:'–', feb:'Kein Studio mit Smart-Trainern oder Wattbikes gefunden (Stand 9.11.2026).', tr:'–',
+    req:['Ersatz bei Regen: Spinning in Thanyapura (kein Smart-Trainer)','Siam Bike Tours fragen, ob ein Rollentrainer gemietet werden kann (nicht bestätigt)'], src:['c_thanya_17','c_thanya_mt'] },
+  { id:'f_kl_bike', k:'velo', w:'w2', n:'Velo in Khao Lak', pt:'khukkhak', addr:'–', web:'',
+    price:'–', hours:'–', feb:'Keinen Rennradverleih gefunden.', tr:'Velo aus Phuket im Transfer-Van mitnehmen (mit Siam Bike Tours klären)',
+    req:['Route 4 meiden; nur früh auf Nebenstrassen zwischen den Stränden','Rückgabe auf dem Weg zum Flughafen einplanen'], src:['c_thaipbs','c_mh_kl','c_bb_kl'] },
+  { id:'f_kl_swim', k:'pool', w:'w2', n:'Schwimmen in Khao Lak', pt:'nangthong', addr:'Meer und Hotelpool', web:'',
+    price:'–', hours:'Morgens, zwischen den Flaggen', feb:'Kein 25-/50-m-Becken gefunden.', tr:'zu Fuss',
+    req:['Freiwasser mit Sichten üben – passt für Jesolo und Hamburg','Hotelpool: Länge vor Ort messen, als Trainingsbecken nur, wenn ≥ 25 m'], src:[] }
+];
+
+/* ---------------------------------------------------------------- Trainingsstrecken (ohne erfundene Linien) */
+const TROUTES = [
+  { id:'tr_coast', sp:'rad', w:'w1', n:'Nordküste bis Sarasin-Brücke', typ:'flach bis wellig', km:null, hm:null,
+    traffic:'Laut Expat Guide die sicherste längere Route, am besten 6–7 Uhr; Mai Khao – Sarasin laut Centara flach mit minimalem Verkehr.', best:'Start 06:15, zurück vor 9 Uhr',
+    stops:'Läden und Strandlokale in Nai Yang und Mai Khao – vor Ort prüfen', risk:['Thepkrasattri Road (402) bei Stossverkehr gefährlich – nicht auf die Hauptstrasse ausweichen','Hauptstrassen nach 7 Uhr meiden'],
+    status:'teil', stx:'Wegpunkte und Verkehrslage aus Quellen; genaue Linienführung nicht geprüft', gpx:null,
+    wp:['sbt','layan','naithon','naiyang','maikhao','sarasin'], g:{o:'Boat Avenue Phuket',d:'Sarasin Bridge Phuket',w:['Nai Thon Beach','Nai Yang Beach','Mai Khao Beach'],m:'bicycling'}, back:true,
+    src:['c_pxg_clubs','c_centara','c_220tri','c_bt_safety'] },
+  { id:'tr_pakweep', sp:'rad', w:'w1', n:'Pak-Weep-Runde ab Thalang (komoot)', typ:'wellig', km:'108', hm:'440–450',
+    traffic:'Laut komoot «very quiet street» im Norden; 160 Fahrer.', best:'Start 06:15 ab Thalang',
+    stops:'Unterwegs Läden – vor Ort prüfen', risk:['Anfahrt Hotel – Thalang nicht geprüft (Taxi oder Roller)','Hitze ab 9 Uhr: genug trinken'],
+    status:'quelle', stx:'Echter Track bei komoot; nicht von mir abgefahren', gpx:'https://www.komoot.com/smarttour/37386262',
+    wp:['thalang','sarasin','pakweep'], g:{o:'Thalang Phuket',d:'Thalang Phuket',w:['Sarasin Bridge','Pak Weep Beach Phang Nga'],m:'bicycling'},
+    src:['c_komoot_pw','c_komoot_quiet'] },
+  { id:'tr_thalang', sp:'rad', w:'w1', n:'Thalang-Runde (bikemap)', typ:'wellig', km:'45,6', hm:'300',
+    traffic:'Nebenstrassen um Thalang laut Expat Guide verkehrsärmer.', best:'früh',
+    stops:'–', risk:['Querungen der 402 meiden'], status:'quelle', stx:'Track bei bikemap; Details ungeprüft', gpx:'https://www.bikemap.net/en/r/3811046',
+    wp:['thalang','thanya'], g:{o:'Thalang Phuket',d:'Thalang Phuket',w:[],m:'bicycling'}, src:['c_bm_thalang','c_pxg_clubs'] },
+  { id:'tr_c2c', sp:'rad', w:'w1', n:'Coast-to-Coast mit Guide (Siam Bike Tours)', typ:'flach', km:'50', hm:null,
+    traffic:'Nebenstrassen entlang Bang Tao und Laguna zur Ostküste (Laem Sai Pier).', best:'täglich 9:00–12:30',
+    stops:'in der Tour', risk:['Start erst 9:00 – heiss'], status:'gefuehrt', stx:'Geführte Tour; die Strecke kennt der Guide',
+    gpx:null, wp:['sbt','laemsai'], g:{o:'Boat Avenue Phuket',d:'Laem Sai Pier Phuket',w:[],m:'bicycling'},
+    price:'1’900–2’600 THB', src:['c_sbt','c_c2c'] },
+  { id:'tr_laguna', sp:'rad', w:'w1', n:'Laguna – Bang Tao (Triathlon-Runde)', typ:'flach', km:null, hm:null,
+    traffic:'Trainingsrunde der Triathleten; wöchentlich organisierte Ausfahrten.', best:'früh, mehrmals fahren',
+    stops:'Boat Avenue', risk:['Hotelzufahrten und Baustellenverkehr beachten'], status:'teil', stx:'Runde aus Quelle; Länge je nach Variante nicht geprüft',
+    gpx:null, wp:['sbt','bangtao','surinb'], g:{o:'Laguna Phuket',d:'Laguna Phuket',w:['Bang Tao Beach','Surin Beach'],m:'bicycling'}, src:['c_pxg_cyc'] },
+  { id:'tr_kl_north', sp:'rad', w:'w2', n:'Khuk Khak – Ban Nam Khem (bikemap)', typ:'wellig', km:'42,8', hm:'306',
+    traffic:'Teilweise Route 4 – dort Ausbau und Sicherheitsbedenken.', best:'nur früh',
+    stops:'–', risk:['Route 4: Ausbau auf 4 Spuren, Unfallschwerpunkte (Thai PBS 2024)'], status:'ungeprueft', stx:'Ungeprüft – nur fahren, wenn du vor Ort eine ruhige Nebenstrasse findest',
+    gpx:'https://www.bikemap.net/en/l/1157190', wp:['khukkhak','bannamkhem'], g:{o:'Khuk Khak Khao Lak',d:'Ban Nam Khem Pier',w:[],m:'bicycling'}, src:['c_bm_kl','c_thaipbs','c_mh_kl'] },
+  { id:'tl_bangtao', sp:'lauf', w:'w1', n:'Strandlauf Bang Tao – Layan', typ:'flach (Sand)', km:'5–16', hm:'0',
+    traffic:'kein Verkehr', best:'bei Ebbe, ab 06:15', stops:'Strandlokale', risk:['Weicher Sand bei Flut – Achillessehne schonen'],
+    status:'quelle', stx:'Strand rund 8 km lang; bei Ebbe harter Sand (siehe Entdecken)', gpx:null, wp:['bangtao','layan'], g:{o:'Bang Tao Beach',d:'Layan Beach Phuket',w:[],m:'walking'}, src:(EXC.find(x=>x.id==='bangtao')||{}).src||[] },
+  { id:'tl_laguna', sp:'lauf', w:'w1', n:'Laguna-Wege', typ:'flach', km:'5–15', hm:'wenig',
+    traffic:'früh vermutlich ruhig (nicht geprüft)', best:'06:00–07:30', stops:'Boat Avenue', risk:['Hotelzufahrten'], status:'ungeprueft', stx:'Nicht geprüft – Wege im Resortgebiet selbst zusammenstellen',
+    gpx:null, wp:['sbt','bangtao'], g:{o:'Laguna Phuket',d:'Laguna Phuket',w:[],m:'walking'}, src:[] },
+  { id:'tl_track', sp:'lauf', w:'w1', n:'500-m-Bahn Thanyapura', typ:'Bahn', km:'beliebig', hm:'0',
+    traffic:'kein Verkehr', best:'mit dem Schwimmen kombinieren', stops:'vor Ort', risk:['Zugang mit Tagespass klären'],
+    status:'quelle', stx:'Eigene 500-m-Laufbahn', gpx:null, wp:['thanya'], g:{o:'Thanyapura Phuket',d:'Thanyapura Phuket',w:[],m:'walking'}, src:['c_thanya_mt'] },
+  { id:'tl_naiyang', sp:'lauf', w:'w1', n:'Strand Nai Yang', typ:'flach (Sand)', km:'4 (2 km Strand hin und zurück)', hm:'0',
+    traffic:'kein Verkehr', best:'früh, bei Ebbe', stops:'Strandlokale', risk:['Bei Ebbe weite Sandflächen'], status:'quelle', stx:'Strand rund 2 km lang',
+    gpx:null, wp:['naiyang'], g:{o:'Nai Yang Beach',d:'Nai Yang Beach',w:[],m:'walking'}, src:['c_ny_pxg'] },
+  { id:'tl_kl', sp:'lauf', w:'w2', n:'Bang Niang – Leuchtturm', typ:'flach', km:'5,5 (Runde)', hm:'30',
+    traffic:'Strand und Strandweg', best:'06:00–07:30', stops:'Lokale in Bang Niang', risk:['Route 4 nur queren, nicht entlanglaufen'],
+    status:'quelle', stx:'Runde aus früherer Recherche (Entdecken)', gpx:null, wp:['bangniang','lighthouse'], g:{o:'Bang Niang Beach',d:'Nang Thong Beach Khao Lak',w:[],m:'walking'}, src:(EXC.find(x=>x.id==='nangthong')||{}).src||[] }
+];
+
+/* ---------------------------------------------------------------- Zusätzliche Kartenpunkte (Lage ungefähr) */
+const CAMP_PTS = [
+  {id:'maikhao', L:'ziel', ic:'beach', lon:98.293, lat:8.152, n:'Mai Khao Beach', s:'Langer, wilder Strand – zum Spazieren', z:9, q:'Mai Khao Beach Phuket', d:'Schöner zum Spazieren als zum Baden (stärkere Strömung).', src:['c_ny_pxg']},
+  {id:'thalang', L:'rad', ic:'bike', lon:98.338, lat:8.027, n:'Thalang', s:'Start Pak-Weep- und Thalang-Runde', z:9, q:'Thalang Phuket', d:'Ausgangspunkt zweier Velorunden aus komoot und bikemap.', src:['c_komoot_pw','c_bm_thalang']},
+  {id:'pakweep', L:'rad', ic:'beach', lon:98.276, lat:8.288, n:'Pak Weep Beach', s:'Wendepunkt der 108-km-Runde', z:9, q:'Pak Weep Beach Phang Nga', d:'Wendepunkt der komoot-Runde ab Thalang.', src:['c_komoot_pw']},
+  {id:'laemsai', L:'rad', ic:'boat', lon:98.408, lat:8.022, n:'Laem Sai Pier', s:'Ziel der Coast-to-Coast-Tour', z:9, q:'Laem Sai Pier Phuket', d:'Ostküste; Ziel der geführten Tour von Siam Bike Tours.', src:['c_sbt']},
+  {id:'nhbl', L:'info', ic:'pool', lon:98.384, lat:7.965, n:'NH Boat Lagoon', s:'50-m-Becken, Day Pass', z:8, q:'NH Boat Lagoon Phuket Resort', d:'Day Pass ab 300–400 THB inkl. Essensguthaben.', src:['c_nh_dp']},
+  {id:'surakul', L:'info', ic:'pool', lon:98.381, lat:7.889, n:'Surakul-Stadion', s:'25-m-Becken, 50–80 THB', z:9, q:'Surakul Stadium Swimming Pool Phuket', d:'Öffentliches 25-m-Becken in Phuket Town.', src:['c_pxg_pools']},
+  {id:'saphanhin', L:'info', ic:'pool', lon:98.400, lat:7.861, n:'Saphan Hin', s:'25-m-Becken, 50–80 THB', z:9, q:'Saphan Hin swimming pool Phuket', d:'Öffentliches 25-m-Becken im Süden von Phuket Town.', src:['c_pxg_pools']},
+  {id:'nyr', L:'base', ic:'bed', lon:98.2985, lat:8.0905, n:'Nai Yang Beach Resort', s:'Nai Yang · 2 Min. zum Strand', z:12, hotel:'nyr', q:'Nai Yang Beach Resort and Spa Phuket'},
+  {id:'kokony', L:'base', ic:'bed', lon:98.2995, lat:8.0848, n:'Kokotel Nai Yang', s:'Nai Yang · 2 Min. zum Strand', z:12, hotel:'kokony', q:'Kokotel Phuket Nai Yang Beach'},
+  {id:'nydisc', L:'base', ic:'bed', lon:98.3003, lat:8.0812, n:'Naiyang Discovery', s:'Nai Yang · am Strand', z:12, hotel:'nydisc', q:'Naiyang Discovery Beach Resort'},
+  {id:'btv', L:'base', ic:'bed', lon:98.2965, lat:7.9930, n:'Bangtao Village Resort', s:'Bang Tao · 5 Min. zum Strand', z:12, hotel:'btv', q:'Bangtao Village Resort Phuket'},
+  {id:'ntb', L:'base', ic:'bed', lon:98.2465, lat:8.6440, n:'Nang Thong Bay Resort', s:'Nang Thong · 3 Min. zum Strand', z:12, hotel:'ntb', q:'Nang Thong Bay Resort Khao Lak'},
+  {id:'bhandari', L:'base', ic:'bed', lon:98.2478, lat:8.6488, n:'Khaolak Bhandari', s:'Nang Thong · 2 Min. zum Strand', z:12, hotel:'bhandari', q:'Khaolak Bhandari Resort and Spa'}
+];
+
+/* ---------------------------------------------------------------- Hotels: Ergänzungen */
+const HOTELS_ADD = [
+  { id:'btv', w:'w1', area:'bt', name:'Bangtao Village Resort', tag:'5 Min. zum Strand · 3 Sterne', kind:'Resort (3 Sterne)',
+    lage:'5 Min. zu Fuss zum Bang Tao Beach; Restaurants 6–11 Min. (z. B. Siam Mumbai, Catch Beach Club, Carpe Diem).',
+    pool:'Pool und Kinderbecken', gym:'Kein Fitnessraum angegeben', extra:'Ruhige Lage laut Beschreibung',
+    price:'Februar-Preis prüfen', priceNote:'Keinen verlässlichen Februar-Preis gefunden.',
+    plus:['Strand und Restaurants zu Fuss','Nahe Boat Avenue (Velo)'], minus:['Einfacher Standard'],
+    src:['c_h_btv_trav','c_h_btv_exp'], q:'Bangtao Village Resort Phuket', addr:'72/26 Moo 3, Srisoonthorn Rd., Choeng Thale' },
+  { id:'nyr', w:'w1', area:'ny', name:'Nai Yang Beach Resort & Spa', tag:'Nai Yang · ruhig · 3 Pools', kind:'Resort (4 Sterne)',
+    lage:'Rund 2 Min. zum Strand (Oyster); Restaurants wie Sea Almond oder Marina Seafood 1 Min. zu Fuss (Expedia). Am Rand des Sirinat-Nationalparks.',
+    pool:'3 Pools', gym:'Fitness nicht bestätigt', extra:'Velos zum Mieten',
+    price:'Schnitt ca. USD 50 pro Nacht', priceNote:'KAYAK-Durchschnitt der letzten zwei Wochen, nicht Februar. Februar ist dort Hochsaison (Schätzung: teurer).', usd:[50,90], pv:false,
+    plus:['Ruhig, Strand und Lokale vor der Tür','Kürzester Weg zur Nordküsten-Runde'], minus:['Gelegentlich Fluglärm','Velo-Shop 12 km entfernt (einmal abholen)'],
+    src:['c_h_nyr_oyster','c_h_nyr_exp','c_h_nyr_kayak','c_ny_thg'], q:'Nai Yang Beach Resort and Spa Phuket', addr:'Nai Yang Beach, Sakhu, Thalang' },
+  { id:'kokony', w:'w1', area:'ny', name:'Kokotel Phuket Nai Yang Beach', tag:'Nai Yang · 2 Min. zum Strand', kind:'Hotel (4 Sterne laut KAYAK)',
+    lage:'2 Min. zu Fuss zum Nai Yang Beach (Booking.com); Strandlokale in der Nähe.',
+    pool:'Pool', gym:'Fitness nicht bestätigt', extra:'Restaurant, Parkplatz',
+    price:'ab ca. USD 66–69 pro Nacht', priceNote:'Booking.com-Angebot ohne Datum – Februar prüfen.', usd:[66,100], pv:false,
+    plus:['Im Budget, nahe Strand'], minus:['Gelegentlich Fluglärm'],
+    src:['c_h_ny_bk','c_h_ny_tap'], q:'Kokotel Phuket Nai Yang Beach', addr:'Nai Yang Beach, Sakhu' },
+  { id:'nydisc', w:'w1', area:'ny', name:'Naiyang Discovery Beach Resort', tag:'Nai Yang · am Strand · günstig', kind:'Resort',
+    lage:'Liegt am Nai Yang Beach (Booking.com).',
+    pool:'Pool nicht bestätigt', gym:'Kein Fitnessraum angegeben', extra:'Parkplatz',
+    price:'Schnitt ca. USD 25–39 pro Nacht', priceNote:'KAYAK-Durchschnitt, nicht Februar.', usd:[25,60], pv:false,
+    plus:['Am günstigsten in Strandnähe'], minus:['Einfach','Fluglärm möglich'],
+    src:['c_h_disc_kayak','c_h_ny_bk'], q:'Naiyang Discovery Beach Resort', addr:'Nai Yang Beach, Sakhu' },
+  { id:'ntb', w:'w2', area:'kl', name:'Nang Thong Bay Resort', tag:'3 Min. zum Strand', kind:'Resort',
+    lage:'3 Min. zu Fuss zum Nang Thong Beach.', pool:'Pool', gym:'Fitness nicht bestätigt', extra:'Restaurant im Haus',
+    price:'Februar-Preis prüfen', priceNote:'Keinen verlässlichen Februar-Preis gefunden.',
+    plus:['Strand und Lokale zu Fuss'], minus:['Kein Gym bestätigt'], src:['c_h_ntb'], q:'Nang Thong Bay Resort Khao Lak', addr:'13/5 Khuekkhak, Takua Pa' },
+  { id:'bhandari', w:'w2', area:'kl', name:'Khaolak Bhandari Resort & Spa', tag:'2 Min. zum Strand', kind:'Resort',
+    lage:'Nang Thong Beach 2 Min. zu Fuss; Restaurants 4–11 Min. zu Fuss; Flughafen ca. 68 Min. Fahrt (Expedia).',
+    pool:'Pool', gym:'Fitness nicht bestätigt', extra:'Spa',
+    price:'Februar-Preis prüfen', priceNote:'Keinen verlässlichen Februar-Preis gefunden.',
+    plus:['Restaurants sehr nah'], minus:['Preis unklar'], src:['c_h_bhandari'], q:'Khaolak Bhandari Resort and Spa', addr:'26/25 Moo 7, Khuk Khak, Takua Pa' }
+];
+// Bereich, Top-3 und Preisangaben für die bisherigen Hotels
+const HOTEL_META = {
+  homa:{area:'bt', usd:[60,90], pv:false, warn:'Strand ca. 3 km – erfüllt «5–10 Min. zu Fuss» nicht'},
+  hgi:{area:'bt', usd:[97,140], pv:false, warn:'Strand 14 Min. – etwas weiter als gewünscht'},
+  bw:{area:'bt', usd:[75,180], pv:false, top:2},
+  andaman:{area:'bt', usd:[168,168], pv:true, top:3, warn:'Über Budget (Februar-Preis)'},
+  btv:{top:1},
+  nyr:{top:1}, kokony:{top:2}, nydisc:{top:3},
+  oriental:{area:'kl', top:1}, ntb:{top:2}, ramada:{area:'kl', top:3},
+  kokotel:{area:'kl', usd:[119,141], pv:false, warn:'Februar laut KAYAK der teuerste Monat'}, bhandari:{}
+};
+const AREAS = { bt:'Bang Tao / Layan', ny:'Nai Yang (Alternative)', kl:'Khao Lak' };
+
+/* ---------------------------------------------------------------- Tagesprogramme A/B/C */
+const PROG = {
+  strand_layan:{t:'Strandtag Layan', ic:'beach', dur:'4–5 Std.', cost:'gratis', tr:'Roller oder Velo, ca. 10 Min.', est:true, food:'Lokale am Südende von Layan / Bang Tao', q:'Layan Beach Phuket', x:'layan'},
+  strand_bt:{t:'Bang Tao Strand & Massage', ic:'beach', dur:'4–5 Std.', cost:'Massage vor Ort erfragen', tr:'zu Fuss', food:'Strandlokale Bang Tao (Karte «Essen»)', q:'Bang Tao Beach', x:'bangtao'},
+  banana:{t:'Banana Beach (kleine Bucht)', ic:'beach', dur:'4 Std.', cost:'gratis', tr:'Roller ca. 15 Min.', est:true, food:'Snacks vor Ort, abends Bang Tao', q:'Banana Beach Phuket', x:'banana'},
+  pool:{t:'Pool, Lesen, früh essen', ic:'pool', dur:'frei', cost:'gratis', tr:'–', food:'Hotel oder nächstes Lokal', q:''},
+  naiyang:{t:'Nai Yang & Sirinat-Park', ic:'tree', dur:'4–5 Std.', cost:'Parkeintritt vor Ort prüfen', tr:'Roller ca. 20 Min.', est:true, food:'Seafood-Lokale unter den Bäumen am Strand', q:'Nai Yang Beach', src:['c_ny_wop','c_ny_pxg']},
+  maikhao:{t:'Mai Khao: Strandspaziergang & Flugzeuge', ic:'plane', dur:'3 Std.', cost:'gratis', tr:'Roller ca. 25 Min.', est:true, food:'Nai Yang auf dem Rückweg', q:'Mai Khao Beach Phuket', src:['c_ny_atlas','c_ny_pxg']},
+  oldtown:{t:'Phuket Old Town', ic:'museum', dur:'4–5 Std.', cost:'gratis (Taxi extra)', tr:'Taxi/Grab ca. 40 Min.', est:true, food:'Altstadt-Cafés', q:'Phuket Old Town'},
+  lardyai:{t:'Lard-Yai-Sonntagsmarkt', ic:'market', dur:'3 Std. (16–22 Uhr)', cost:'gratis', tr:'Taxi/Grab ca. 40 Min.', est:true, food:'Streetfood am Markt', q:'Lard Yai Phuket Walking Street', x:'lardyai'},
+  roller_nord:{t:'Rollertour Nordküste', ic:'view', dur:'5 Std.', cost:'Roller ca. 70–300 THB pro Tag', tr:'Roller', food:'Nai Yang (Seafood)', q:'Nai Thon Beach', src:['c_scoot'], g:{o:'Bang Tao Beach',d:'Sarasin Bridge',w:['Nai Thon Beach','Nai Yang Beach'],m:'driving'}},
+  kyn:{t:'Koh Yao Noi mit Roller', ic:'island', dur:'ganzer Tag', cost:'Boot online buchen; Roller auf der Insel', tr:'Taxi zum Pier ca. 30–40 Min., Speedboot ca. 30 Min.', est:true, food:'Thai-Lokale auf der Insel', q:'Koh Yao Noi', x:'kyn'},
+  natai:{t:'Halt am Natai Beach', ic:'beach', dur:'1–2 Std.', cost:'im Transfer einplanen', tr:'Umzugs-Van', food:'Snack am Strand', q:'Natai Beach Phang Nga', x:'natai'},
+  direkt:{t:'Direkt nach Khao Lak, Abendspaziergang', ic:'beach', dur:'Abend', cost:'Transfer', tr:'Van ca. 1,5 Std. (Schätzung)', est:true, food:'Bang Niang (Karte «Essen»)', q:'Bang Niang Beach'},
+  markt_bn:{t:'Bang-Niang-Markt', ic:'market', dur:'Abend', cost:'gratis', tr:'zu Fuss/Roller', food:'Streetfood am Markt', q:'Bang Niang Market', x:'market'},
+  nangthong:{t:'Strandtag Nang Thong', ic:'beach', dur:'4–5 Std.', cost:'gratis', tr:'zu Fuss', food:'Lokale am Strandweg', q:'Nang Thong Beach Khao Lak', x:'nangthong'},
+  bangniang:{t:'Strandtag Bang Niang', ic:'beach', dur:'4–5 Std.', cost:'gratis', tr:'zu Fuss oder Roller', food:'Bang Niang (Markt-Gegend)', q:'Bang Niang Beach', x:'bangniang'},
+  takuapa:{t:'Takua Pa Altstadt', ic:'museum', dur:'4 Std.', cost:'gratis', tr:'Roller/Taxi ca. 35–40 Min.', est:true, food:'Lokale in der Altstadt', q:'Takua Pa Old Town', x:'takuapa'},
+  museum:{t:'Tsunami-Museum & Markt', ic:'museum', dur:'3 Std.', cost:'Eintritt vor Ort prüfen', tr:'zu Fuss ab Bang Niang', food:'Bang-Niang-Markt', q:'International Tsunami Museum Khao Lak', x:'museum'},
+  lamru:{t:'Lam-Ru-Nationalpark', ic:'tree', dur:'3–4 Std.', cost:'Parkeintritt vor Ort prüfen', tr:'Roller/Velo', food:'Picknick, abends Nang Thong', q:'Khao Lak Lam Ru National Park', x:'lamru'},
+  kkk:{t:'Koh Kho Khao', ic:'island', dur:'ganzer Tag', cost:'Fähre und Roller vor Ort', tr:'Roller zum Pier ca. 35 Min., dann Fähre', est:true, food:'Lokale auf der Insel', q:'Koh Kho Khao', x:'kkk'},
+  similan:{t:'Similan-Inseln (Schnorcheln)', ic:'island', dur:'ganzer Tag', cost:'Speedboot ca. 2’300–3’200 THB p. P. + Parkgebühr 500 THB (oft inkl.)', tr:'Abholung im Hotel', food:'im Tourpreis', q:'Similan Islands', x:'similan', book:true},
+  surin:{t:'Surin-Inseln', ic:'island', dur:'ganzer Tag', cost:'3’034–3’800 THB p. P. + evtl. 500 THB', tr:'Abholung im Hotel', food:'im Tourpreis', q:'Surin Islands', x:'surin', book:true},
+  cheowlan:{t:'Khao Sok & Cheow-Lan-See', ic:'tree', dur:'ca. 11 Std.', cost:'ca. USD 133 p. P. inkl. Abholung', tr:'Abholung ca. 06:40', food:'im Tourpreis', q:'Cheow Lan Lake', x:'cheowlan', book:true},
+  chongfa:{t:'Chong-Fa-Wasserfall', ic:'fall', dur:'3 Std.', cost:'Parkeintritt vor Ort prüfen', tr:'Roller ca. 15 Min. (Schätzung)', est:true, food:'Bang Niang', q:'Chong Fa Waterfall Khao Lak', x:'chongfa'},
+  packen:{t:'Packen, letzter Strandmorgen', ic:'beach', dur:'Vormittag', cost:'–', tr:'Transfer zum Flughafen ca. 70 Min.', food:'Mittag im Hotel', q:''}
+};
+// Pro Tag drei Varianten; def = bisheriger Plan
+const DAYPROG = {
+  '2027-02-14':{A:'strand_layan', B:'lardyai', C:null, def:'A', note:'Ankunftstag – nur wenn die Energie reicht.'},
+  '2027-02-15':{A:'banana', B:'oldtown', C:'roller_nord', def:'A'},
+  '2027-02-16':{A:'strand_layan', B:'naiyang', C:'maikhao', def:'A'},
+  '2027-02-17':{A:'strand_bt', B:'oldtown', C:'kyn', def:'C'},
+  '2027-02-18':{A:'pool', B:'naiyang', C:'roller_nord', def:'A'},
+  '2027-02-19':{A:'strand_layan', B:'oldtown', C:'banana', def:'A'},
+  '2027-02-20':{A:'direkt', B:'natai', C:'markt_bn', def:'B', note:'Umzugstag.'},
+  '2027-02-21':{A:'nangthong', B:'takuapa', C:'lamru', def:'B', note:'Takua Pa: Walking Street am Sonntagabend (laut Plan ca. 16–19 Uhr).'},
+  '2027-02-22':{A:'bangniang', B:'markt_bn', C:'similan', def:'C', note:'Similan-Tag: Abholung früh – heute kein Training.'},
+  '2027-02-23':{A:'nangthong', B:'museum', C:'chongfa', def:'A'},
+  '2027-02-24':{A:'bangniang', B:'markt_bn', C:'surin', def:'C', note:'Bei Surin wird früh abgeholt: Training kurz halten oder auslassen. Alternative: Koh Kho Khao (Ausflüge).'},
+  '2027-02-25':{A:'nangthong', B:'lamru', C:'chongfa', def:'B'},
+  '2027-02-26':{A:'packen', B:'bangniang', C:null, def:'A', note:'Abreise am Abend.'}
+};
+
+/* ---------------------------------------------------------------- Kostenrahmen (für 2 Personen) */
+const COSTS = [
+  { k:'flug', n:'Flüge MXP – Bangkok (Thai, hin und zurück)', lo:['eur',2*577], hi:['eur',2*730], src:['f_kayak_mxp'], note:'KAYAK: meist 577–730 € pro Person. Freigepäck laut Tarif prüfen.' },
+  { k:'flug2', n:'Inlandflüge Bangkok – Phuket (2 Strecken)', lo:['thb',4*1780], hi:['thb',4*5456], src:['c_dom'], note:'1’780–5’456 THB pro Person und Strecke (Expedia). Als Durchgangsticket mit Thai oft einfacher – prüfen.' },
+  { k:'park', n:'Parkieren Malpensa (14 Tage)', lo:['eur',84], hi:['eur',116], src:['p_pmc','p_pmc_t'], note:'Shuttle-Parkplätze laut «Parken». Fahrt zum Flughafen nicht eingerechnet.' },
+  { k:'hotel', n:'Hotels (12 Nächte)', lo:['chf',12*40], hi:['chf',12*80], note:'Dein Budget CHF 40–80 pro Nacht. Strandhotels in Bang Tao liegen im Februar oft darüber (bis CHF 120 für Spezielles).', est:true },
+  { k:'velo', n:'Rennrad (6–12 Tage)', lo:['thb',6*2000], hi:['thb',12*2000], src:['c_sbt'], note:'2’000 THB pro Tag; Wochenpreis erfragen (Expat Guide: Carbon 8’000–15’000 THB pro Woche).' },
+  { k:'pool', n:'Becken & Bahn (3–4 Besuche)', lo:['thb',3*500], hi:['thb',4*700], src:['c_pxg_pools'], note:'Thanyapura 500–700 THB pro Tagespass.' },
+  { k:'transfer', n:'Transfers (Flughafen, Umzug, Rückweg)', lo:['thb',700+1900+1900], hi:['thb',900+2500+2000], src:['h_bw_trav','h_koko_hc','h_ramada_exp'], note:'Hotel-Shuttles: 700–900 THB Flughafen–Bang Tao, 1’900–2’000 THB Khao Lak–Flughafen; Umzug als Schätzung.', est:true },
+  { k:'roller', n:'Roller (ca. 10 Tage)', lo:['thb',10*200], hi:['thb',10*350], src:['c_scoot'], note:'Schätzung; Phuket 101 nennt 70–300 THB pro Tag.', est:true },
+  { k:'essen', n:'Essen & Trinken (13 Tage)', lo:['thb',13*1500], hi:['thb',13*3000], note:'Schätzung: 1’500–3’000 THB pro Tag für zwei.', est:true },
+  { k:'ausfl', n:'Ausflüge (Similan + 1–2 weitere)', lo:['thb',2*2300+2*500], hi:['thb',2*3200+2*500+2*133*0.81*41], src:['sim_tisland','sim_eco'], note:'Similan pro Person 2’300–3’200 THB + 500 THB Parkgebühr; obere Grenze inkl. Khao Sok (USD 133 p. P.).', est:true }
+];
+
+/* ================================================================ Trainingslager · Ferienprogramm · Kosten (camp.js) */
+HOTELS.push(...HOTELS_ADD);
+HOTELS.forEach(h => { const m = HOTEL_META[h.id]; if(m) Object.keys(m).forEach(k => { if(h[k]===undefined) h[k]=m[k]; }); });
+MAPPTS.push(...CAMP_PTS);
+(function(){
+  const end = (r,i) => { const q=r.pts[i]; return [q[0], q[1], i===0?(r.g&&r.g.o||''):(r.g&&r.g.d||'')]; };
+  const keep = MAPRTS.filter(r => r.L==='weg').map(r => Object.assign({}, r, { wp:[end(r,0), end(r,r.pts.length-1)] }));
+  const tr = TROUTES.map(r => ({ id:r.id, L:r.sp, n:r.n, s:[r.typ, r.km?r.km+' km':'', r.hm?r.hm+' Hm':''].filter(Boolean).join(' · '), d:r.traffic, src:r.src, g:r.g, wp:r.wp, tr:r }));
+  MAPRTS.splice(0, MAPRTS.length, ...tr, ...keep);
+})();
+DOCS.tk_choices = 'ticks/choices'; DOCS.zones = 'trip/zones';
+DOC_KEYS.push('tk_choices','zones');
+Object.assign(S, { trSeg:'plan', ferSeg:'programm' });
+MV.day = ''; MV.fav = false;
+let FAVS = new Set(); try{ FAVS = new Set(JSON.parse(localStorage.getItem('tl-favs')||'[]')); }catch(e){}
+function saveFavs(){ try{ localStorage.setItem('tl-favs', JSON.stringify([...FAVS])); }catch(e){} }
+
+/* ------------------------------------------------ Hilfen */
+const wpc = w => { if(Array.isArray(w)) return w; const p=ptOf(w); return p?[p.lon,p.lat,p.n]:null; };
+function kmB(a,b){ const R=6371, r=Math.PI/180, dLa=(b[1]-a[1])*r, dLo=(b[0]-a[0])*r; const h=Math.sin(dLa/2)**2+Math.cos(a[1]*r)*Math.cos(b[1]*r)*Math.sin(dLo/2)**2; return 2*R*Math.asin(Math.sqrt(h)); }
+function routeEstKm(r){ const w=(r.wp||[]).map(wpc).filter(Boolean); let k=0; for(let i=1;i<w.length;i++) k+=kmB(w[i-1],w[i]); if(r.back) k*=2; return k*1.3; }
+const hm = m => { m=Math.round(+m||0); return Math.floor(m/60)+':'+String(m%60).padStart(2,'0')+' h'; };
+const fmtCHF = n => 'CHF '+Math.round(n).toLocaleString('de-CH').replace(/,/g,'’');
+const fmtTHB = n => Math.round(n/10)*10 > 0 ? (Math.round(n/10)*10).toLocaleString('de-CH').replace(/,/g,'’')+' THB' : '0 THB';
+const toCHFc = (cur,v) => cur==='chf'?v:cur==='eur'?v*FXC.eur:cur==='usd'?v*FXC.usd:v/FXC.thb;
+const ROUTE = id => TROUTES.find(r=>r.id===id);
+const FACOF = id => FAC.find(f=>f.id===id);
+const STATUS_R = { quelle:['Track aus Quelle','ok'], teil:['Teilweise geprüft','mid'], gefuehrt:['Geführte Tour','ok'], ungeprueft:['Ungeprüft','warn'] };
+const LOADS = { leicht:'leicht', mittel:'mittel', hart:'hart' };
+function canPlan(){ return S.mode==='live' && (canManage() || !!window.__PUBLIC); }
+async function planPatch(daysObj){
+  if(!canPlan()){ toast('Ändern kann nur der Besitzer der Seite.'); return false; }
+  if(canManage()) return patch('days', {days:daysObj});
+  try{ await S.db.doc(DOCS.days).update(clean({days:daysObj})); return true; }catch(e){ toast('Speichern nicht möglich'); return false; }
+}
+function sessAll(){ const out=[]; tripDays().forEach(iso=>{ const d=dayOf(iso); (d&&Array.isArray(d.sessions)?d.sessions:[]).forEach((s,i)=>out.push({iso, s, i})); }); return out; }
+function blockOf(iso){ return iso<='2027-02-20' ? 'w1' : 'w2'; }
+const BLOCKS = { w1:{label:'Block 1 · Phuket-Nord', from:'2027-02-13', to:'2027-02-20', cls:'r-w1'}, w2:{label:'Block 2 · Khao Lak & Heimreise', from:'2027-02-21', to:'2027-02-28', cls:'r-w2'} };
+function blockSum(b){
+  const B=BLOCKS[b], t={main:0, tr:0, opt:0, hard:0, n:{rad:0,lauf:0,schwimmen:0}, m:{rad:0,lauf:0,schwimmen:0}};
+  sessAll().filter(x=>x.iso>=B.from && x.iso<=B.to).forEach(({s})=>{
+    if(s.skip || !s.min) return;
+    if(s.opt){ t.opt+=+s.min; return; }
+    t.main+=+s.min; t.tr+=(+s.tr||0);
+    if(s.load==='hart') t.hard++;
+    if(t.n[s.sport]!==undefined){ t.n[s.sport]++; t.m[s.sport]+=+s.min; }
+  });
+  return t;
+}
+function zoneTxt(s){
+  const Z=S.docs.zones; if(!s.z || !Z) return '';
+  const sp = s.sport==='rad'?'rad':s.sport==='lauf'?'lauf':null; if(!sp || !Z[sp] || !Array.isArray(Z[sp].hf)) return '';
+  const ns = String(s.z).match(/\d/g); if(!ns) return '';
+  const zs = Z[sp].hf.filter(z=>ns.includes(String(z[0])));
+  if(!zs.length) return '';
+  const lo=Math.min(...zs.map(z=>z[1])), hiZ=zs[zs.length-1][2];
+  return ' · Puls '+lo+(hiZ?'–'+hiZ:'+');
+}
+
+/* ------------------------------------------------ Trainingsansicht */
+const TSEG = [['plan','Plan'],['strecken','Strecken'],['orte','Orte'],['standort','Standort']];
+function trSegHtml(){ return '<div class="seg" style="grid-template-columns:repeat(4,1fr)" role="group" aria-label="Training">'+TSEG.map(([k,l])=>'<button data-act="tr-seg" data-v="'+k+'" aria-pressed="'+(S.trSeg===k)+'">'+l+'</button>').join('')+'</div>'; }
+function vTraining(){
+  const head='<div class="vh"><h1>Trainingslager Hamburg 2027</h1><p class="muted small">Grundlagenblock im Februar – flexibel: verschieben, tauschen, auslassen. Stand '+CAMP_ASOF+'.</p></div>';
+  if(S.trSeg==='plan' && waiting('days')) return '<div class="view">'+storeBanner()+head+trSegHtml()+skel(3)+'</div>';
+  const body = S.trSeg==='strecken'?vRoutes():S.trSeg==='orte'?vFac():S.trSeg==='standort'?vStandort():vPlan();
+  return '<div class="view">'+storeBanner()+head+trSegHtml()+body+'</div>';
+}
+function zonesCard(){
+  const Z=S.docs.zones;
+  let inner;
+  if(Z && Z.rad && Z.lauf){
+    const row=(sp,lbl)=>'<tr><th>'+lbl+'</th>'+Z[sp].hf.map(z=>'<td><b>Z'+z[0]+'</b>'+z[1]+(z[2]?'–'+z[2]:'+')+'</td>').join('')+'</tr>';
+    inner='<table class="zt"><tbody>'+row('rad','Rad')+row('lauf','Lauf')+'</tbody></table>'+
+      '<p class="small">'+esc(Z.rad.note||'')+'</p><p class="small">'+esc(Z.lauf.note||'')+'</p><p class="hint">Quelle: '+esc(Z.src||'Garmin')+' · Stand '+esc(Z.asof||'')+'. Schwimmen nach deinem CSS-Test.</p>';
+  } else {
+    inner='<p class="small">Intensitäten stehen als Zonen (Z1–Z5) aus deiner Garmin-Uhr bzw. enduco; Schwimmen nach deinem CSS-Test. Konkrete Werte sind nur in der privaten Claude-Version hinterlegt – hier keine erfundenen Schwellen.</p>';
+  }
+  return '<details class="card zcard"><summary><b>Deine Zonen</b><span class="muted small"> – Grundlage für «Z1–Z3»</span></summary>'+inner+'</details>';
+}
+function rulesCard(){
+  return '<section class="card rules"><h2>So ist der Block gebaut</h2><ul class="tight">'+
+    '<li>Grundlage (aerob): fast alles in Z1–Z2, höchstens <b>1–2 harte Einheiten pro Woche</b>.</li>'+
+    '<li>Hitze: die ersten 3 Tage nur locker; in der Hitze zählt der Puls, die Watt dürfen tiefer sein.</li>'+
+    '<li>Start 06:00–06:15 (Sonnenaufgang ca. 06:45) – Licht ans Velo. Fertig vor 9 Uhr.</li>'+
+    '<li>Koppelläufe und Zusatz-Einheiten sind «optional» – sie zählen separat.</li></ul></section>';
+}
+function sessLine(iso, s){
+  const sp=SPORTS[s.sport]||SPORTS.kraft; const done=tickOf('days', iso+'|'+s.id, s).done;
+  const meta=[s.start, s.min?hm(s.min):'', s.km?s.km+' km':''].filter(Boolean).join(' · ');
+  return '<button class="trs '+sp.cls+(s.skip?' is-skip':'')+(done?' is-done':'')+'" data-act="tr-open" data-day="'+iso+'" data-sid="'+esc(s.id)+'">'+
+    '<span class="bar-s"></span><span class="trs-t"><b>'+sp.label+(s.focus?' · '+esc(s.focus):'')+'</b><span class="muted small">'+esc(meta)+(s.ort?' · '+esc(s.ort):'')+'</span></span>'+
+    '<span class="trs-r">'+(s.load?'<i class="ld ld-'+s.load+'">'+LOADS[s.load]+'</i>':'')+(s.opt?'<i class="ld ld-opt">optional</i>':'')+(s.skip?'<i class="ld ld-skip">ausgelassen</i>':'')+(done?'<i class="ld ld-done">✓</i>':'')+'</span></button>';
+}
+function vPlan(){
+  const blocks = Object.keys(BLOCKS).map(b=>{
+    const B=BLOCKS[b], t=blockSum(b);
+    const bars=['rad','lauf','schwimmen'].map(k=>'<span class="tsp '+SPORTS[k].cls+'"><i></i>'+SPORTS[k].label+' '+t.n[k]+'× · '+hm(t.m[k])+'</span>').join('');
+    const warn = t.hard>2 ? '<p class="warnline">'+t.hard+' harte Einheiten – für einen Grundlagenblock eine zu viel.</p>' : '';
+    const days = tripDays().filter(iso=>iso>=B.from && iso<=B.to).map(iso=>{
+      const d=dayOf(iso)||{}; const reg=REGIONS[d.region]?d.region:defaultRegion(iso); const dt=parseISO(iso);
+      const ss=(Array.isArray(d.sessions)?d.sessions:[]);
+      return '<div class="trd '+REGIONS[reg].cls+'"><div class="trd-h"><span class="wd">'+WD[dt.getUTCDay()]+' '+dt.getUTCDate()+'.'+(dt.getUTCMonth()+1)+'.</span><span class="muted small">'+esc(d.title||'')+'</span></div>'+
+        (ss.length?ss.map(s=>sessLine(iso,s)).join(''):'<p class="muted small trd-empty">Kein Training</p>')+'</div>';
+    }).join('');
+    return '<section class="trb card '+B.cls+'"><div class="trb-h"><h2>'+B.label+'</h2><div class="trb-sum"><b>'+hm(t.main)+'</b><span class="muted small">Training · inkl. Transfer '+hm(t.main+t.tr)+(t.opt?' · optional +'+hm(t.opt):'')+'</span></div></div>'+
+      '<div class="tsps">'+bars+'<span class="tsp hard"><i></i>hart: '+t.hard+'</span></div>'+warn+days+'</section>';
+  }).join('');
+  const reset = (window.__PUBLIC && S.docs && localPlanEdited()) ? '<p class="hint">Du hast den Plan auf diesem Gerät geändert. <button class="linkbtn" data-act="tr-reset">Zurücksetzen</button></p>' : '';
+  return zonesCard()+rulesCard()+blocks+reset+'<p class="hint">Tippe auf eine Einheit: Details, Strecke, Alternative – und verschieben, tauschen, auslassen.'+(canPlan()?'':' Ändern kann nur der Besitzer; abhaken geht für beide.')+'</p>';
+}
+function localPlanEdited(){ try{ const L=JSON.parse(localStorage.getItem('th27-local-v1')||'{}'); return !!L['trip/days']; }catch(e){ return false; } }
+function openSess(iso, sid){
+  const d=dayOf(iso)||{}; const s=(d.sessions||[]).find(x=>x.id===sid); if(!s) return;
+  const sp=SPORTS[s.sport]||SPORTS.kraft; const R=s.route?ROUTE(s.route):null; const F=s.fac?FACOF(s.fac):null;
+  const done=tickOf('days', iso+'|'+s.id, s).done;
+  const row=(k,v)=>v?'<div class="kv"><span>'+k+'</span><b>'+v+'</b></div>':'';
+  const kmTxt = s.km ? esc(s.km)+' km'+(s.hm?' · '+esc(s.hm)+' Hm':'') : (R && !R.km ? '≈ '+Math.round(routeEstKm(R))+' km (Luftlinie × 1,3 – Schätzung)' : '');
+  const place = R ? '<button class="linkbtn" data-act="tr-route" data-id="'+R.id+'">'+esc(R.n)+'</button>' : F ? '<button class="linkbtn" data-act="tr-fac" data-id="'+F.id+'">'+esc(F.n)+'</button>' : esc(s.ort||'');
+  const others = sessAll().filter(x=>!(x.iso===iso && x.s.id===sid) && x.iso!==iso && x.s.sport!=='frei');
+  const body =
+    '<div class="kvs">'+row('Fokus', esc(s.focus||'–'))+row('Zone', esc(s.z||'')+esc(zoneTxt(s)))+row('Dauer', s.min?hm(s.min):'')+row('Start', esc(s.start||''))+row('Strecke / Ort', place)+(s.ort&&(R||F)?row('Notiz', esc(s.ort)):'')+row('Distanz', kmTxt)+
+    row('Zeit inkl. Transfer', s.min?hm(+s.min+(+s.tr||0))+(s.tr?' (Transfer '+s.tr+' Min., Schätzung)':''):'')+row('Belastung', s.load?LOADS[s.load]:'')+'</div>'+
+    (s.details?'<p>'+esc(s.details)+'</p>':'')+(s.alt?'<p class="altline"><b>Alternative</b> '+esc(s.alt)+'</p>':'')+
+    (R?'<div class="fl-act">'+ext(gmdir(R.g), 'Google Maps')+'<button class="btn ghost small" data-act="map-focus" data-rt="'+R.id+'">Auf der Karte</button></div>':'')+
+    (F&&F.pt?'<div class="fl-act">'+ext(gmq((ptOf(F.pt)||{}).q||F.n), 'Google Maps')+'<button class="btn ghost small" data-act="map-focus" data-pt="'+F.pt+'">Auf der Karte</button></div>':'')+
+    '<div class="sheet-acts">'+
+      '<button class="btn small" data-act="tr-done" data-day="'+iso+'" data-sid="'+esc(sid)+'"'+(canTick()?'':' disabled')+'>'+(done?'Nicht erledigt':'✓ Erledigt')+'</button>'+
+      (canPlan()?'<button class="btn ghost small" data-act="tr-skip" data-day="'+iso+'" data-sid="'+esc(sid)+'">'+(s.skip?'Wieder aufnehmen':'Auslassen')+'</button>':'')+
+    '</div>'+
+    (canPlan()?'<div class="mvbox"><label class="f"><span>Verschieben auf</span><select id="mv-day">'+tripDays().filter(x=>x!==iso).map(x=>'<option value="'+x+'">'+esc(fmtDay(x))+'</option>').join('')+'</select></label><button class="btn ghost small" data-act="tr-move" data-day="'+iso+'" data-sid="'+esc(sid)+'">Verschieben</button></div>'+
+      (others.length?'<div class="mvbox"><label class="f"><span>Tauschen mit</span><select id="sw-sess">'+others.map(x=>'<option value="'+x.iso+'|'+esc(x.s.id)+'">'+esc(fmtDay(x.iso)+' · '+(SPORTS[x.s.sport]||SPORTS.kraft).label+(x.s.min?' '+hm(x.s.min):'')+(x.s.focus?' – '+x.s.focus:''))+'</option>').join('')+'</select></label><button class="btn ghost small" data-act="tr-swap" data-day="'+iso+'" data-sid="'+esc(sid)+'">Tauschen</button></div>':''):'');
+  openSheet(fmtDay(iso)+' · '+sp.label, body, {cancelLabel:'Schliessen'});
+}
+async function trMove(iso, sid, target){
+  const A=clean(dayOf(iso)||{}), B=clean(dayOf(target)||{region:defaultRegion(target), title:'', sessions:[], nachmittag:'', abend:'', notiz:''});
+  const i=(A.sessions||[]).findIndex(x=>x.id===sid); if(i<0) return;
+  const [s]=A.sessions.splice(i,1); B.sessions=(B.sessions||[]).concat([s]);
+  const ok=await planPatch({[iso]:Object.assign(A, stamp()), [target]:Object.assign(B, stamp())}); if(ok) toast('Verschoben auf '+fmtDay(target));
+}
+async function trSwap(iso, sid, other){
+  const [iso2, sid2]=other.split('|'); if(!iso2||iso2===iso) return;
+  const A=clean(dayOf(iso)||{}), B=clean(dayOf(iso2)||{});
+  const i=(A.sessions||[]).findIndex(x=>x.id===sid), j=(B.sessions||[]).findIndex(x=>x.id===sid2); if(i<0||j<0) return;
+  const t=A.sessions[i]; A.sessions[i]=B.sessions[j]; B.sessions[j]=t;
+  const ok=await planPatch({[iso]:Object.assign(A, stamp()), [iso2]:Object.assign(B, stamp())}); if(ok) toast('Getauscht');
+}
+
+/* ------------------------------------------------ Strecken */
+function routeCard(r){
+  const st=STATUS_R[r.status]||STATUS_R.ungeprueft;
+  const est = r.km ? '' : '≈ '+Math.round(routeEstKm(r))+' km';
+  const t = r.km && /^[\d,]+$/.test(r.km) ? (r.sp==='rad' ? hm(parseFloat(r.km.replace(',','.'))/28*60)+' bei 28 km/h' : '') : '';
+  const kv=(k,v)=>v?'<div class="kv"><span>'+k+'</span><b>'+v+'</b></div>':'';
+  return '<article class="card rcard '+(r.w==='w2'?'r-w2':'r-w1')+'" id="tr-'+r.id+'"><div class="rc-h"><span class="sp-dot '+(SPORTS[r.sp]||{}).cls+'"></span><h3>'+esc(r.n)+'</h3><span class="rstat rs-'+st[1]+'">'+st[0]+'</span></div>'+
+    '<div class="kvs">'+kv('Distanz', r.km?esc(r.km)+' km':esc(est)+EST)+kv('Höhenmeter', r.hm?esc(r.hm):'nicht bekannt')+kv('Charakter', esc(r.typ))+kv('Asphalt', r.sp==='rad'?'laut Quelle Strasse – Anteil nicht geprüft':'–')+kv('Verkehr', esc(r.traffic))+kv('Beste Zeit', esc(r.best))+kv('Verpflegung', esc(r.stops))+kv('Zeitbedarf', t?esc(t)+EST:'')+(r.price?kv('Preis', esc(r.price)):'')+'</div>'+
+    (r.risk&&r.risk.length?'<div class="risk"><b>Risikostellen</b><ul class="tight">'+r.risk.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></div>':'')+
+    '<p class="small muted">Status: '+esc(r.stx)+'. Auf der Karte nur Wegpunkte – keine erfundene Linie.</p>'+
+    '<div class="fl-act"><button class="btn small" data-act="map-focus" data-rt="'+r.id+'">Auf der Karte</button>'+ext(gmdir(r.g),'Google Maps')+
+      (r.gpx?ext(r.gpx,'GPX bei der Quelle'):'')+(window.__PUBLIC?'<button class="btn ghost small" data-act="gpx-wp" data-id="'+r.id+'">Wegpunkte (GPX)</button>':'')+'</div>'+
+    '<div class="srcs">'+srcLinks(r.src)+'</div></article>';
+}
+function vRoutes(){
+  const grp=(w,sp,l)=>{ const L=TROUTES.filter(r=>r.w===w&&r.sp===sp); return L.length?'<h2 class="grp-h">'+l+'</h2>'+L.map(routeCard).join(''):''; };
+  return '<section class="card"><p class="small" style="margin:0"><b>Wichtig:</b> Eine schöne Strecke ist nicht automatisch sicher. Ohne verlässliche Quelle steht «ungeprüft». GPX gibt es nur dort, wo die Quelle einen echten Track hat (komoot, bikemap) – erfundene Tracks gibt es hier nicht. «Wegpunkte (GPX)» enthält nur Punkte, keine Linie.</p></section>'+
+    grp('w1','rad','Phuket-Nord · Rennrad')+grp('w1','lauf','Phuket-Nord · Laufen')+grp('w2','rad','Khao Lak · Rennrad')+grp('w2','lauf','Khao Lak · Laufen')+
+    '<section class="card"><h2>Gruppen</h2>'+facBody(FACOF('f_groups'))+'</section>';
+}
+
+/* ------------------------------------------------ Orte (Infrastruktur) */
+const FK = { velo:'Velo', pool:'Schwimmen', gruppe:'Gruppen', indoor:'Indoor' };
+function distLine(f){
+  const p=ptOf(f.pt); if(!p) return '';
+  const refs = f.w==='w1' ? [['Bang Tao (Best Western)','bw'],['Nai Yang (Resort)','nyr']] : [['Nang Thong (Oriental)','oriental']];
+  return refs.map(([l,id])=>{ const q=ptOf(id); if(!q) return ''; const k=kmB([p.lon,p.lat],[q.lon,q.lat]); return l+': '+(k<1?Math.round(k*1000)+' m':k.toFixed(1).replace('.',',')+' km'); }).filter(Boolean).join(' · ')+' (Luftlinie)';
+}
+function facBody(f){
+  const kv=(k,v)=>v&&v!=='–'?'<div class="kv"><span>'+k+'</span><b>'+v+'</b></div>':'';
+  return '<div class="kvs">'+kv('Adresse', esc(f.addr))+kv('Preis', esc(f.price))+kv('Zeiten', esc(f.hours))+kv('Februar 2027', esc(f.feb))+kv('Anreise', esc(f.tr))+kv('Distanz', esc(distLine(f)))+(f.tel?kv('Telefon', '<a href="tel:'+esc(f.tel.replace(/\s/g,''))+'">'+esc(f.tel)+'</a>'):'')+'</div>'+
+    (f.req&&f.req.length?'<ul class="tight">'+f.req.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+
+    '<div class="fl-act">'+(f.web?ext(f.web,'Website','btn'):'')+(f.pt&&ptOf(f.pt)?'<button class="btn ghost small" data-act="map-focus" data-pt="'+f.pt+'">Auf der Karte</button>'+ext(gmq(ptOf(f.pt).q||f.n),'Google Maps'):'')+'</div>'+
+    '<div class="srcs">'+srcLinks(f.src)+'</div>';
+}
+function vFac(){
+  const sec=(w,l)=>'<h2 class="grp-h">'+l+'</h2>'+FAC.filter(f=>f.w===w && f.id!=='f_groups').map(f=>'<article class="card fcard" id="fac-'+f.id+'"><div class="rc-h"><span class="fk">'+esc(FK[f.k]||'')+'</span><h3>'+esc(f.n)+'</h3></div>'+facBody(f)+'</article>').join('');
+  return sec('w1','Phuket-Nord')+'<section class="card"><h2>Gruppenfahrten</h2>'+facBody(FACOF('f_groups'))+'</section>'+sec('w2','Khao Lak')+
+    '<p class="hint">Distanzen sind Luftlinie aus ungefähren Kartenpositionen. Preise und Zeiten mit Quelle; alles andere vor Ort bestätigen.</p>';
+}
+
+/* ------------------------------------------------ Standortanalyse */
+function grpAvg(r,g){ const G=CRIT.find(c=>c.k===g); return G.sub.reduce((a,[k])=>a+r.sc[k],0)/G.sub.length; }
+function regTotal(r){ return CRIT.reduce((a,G)=>a+grpAvg(r,G.k)*G.w/100,0); }
+function comboScore(c){
+  const tot=c.parts.reduce((a,p)=>a+p[1],0), g={};
+  CRIT.forEach(G=>{ g[G.k]=c.parts.reduce((a,[id,n])=>a+grpAvg(REGS.find(r=>r.id===id),G.k)*n,0)/tot; });
+  return {g, t:CRIT.reduce((a,G)=>a+g[G.k]*G.w/100,0)};
+}
+const f1 = n => n.toFixed(1).replace('.',',');
+function vStandort(){
+  const D=DECIDE;
+  const top='<section class="card verdict"><span class="badge rec">Ergebnis Schritt 1</span><h2>'+esc(D.verdict)+'</h2><p>'+esc(D.why)+'</p><ul class="tight"><li><b>Nächte:</b> '+esc(D.nights)+'</li><li><b>Hotels:</b> '+esc(D.hotels)+'</li><li><b>Für deine Frau:</b> '+esc(D.wife)+'</li><li><b>Für dein Training:</b> '+esc(D.him)+'</li></ul><p class="hint">'+esc(D.change)+'</p></section>';
+  const pm='<section class="card"><h2>Bisheriger Plan: Vor- und Nachteile</h2>'+pmList(D.plus,D.minus)+'</section>';
+  const tbl='<section class="card"><h2>Bewertung (40 / 40 / 20)</h2><p class="muted small">Meine Einschätzung auf Basis der Quellen, 1 = schlecht, 5 = sehr gut. Antippen für die Begründung.</p>'+
+    '<div class="sct"><div class="sct-r sct-h"><span>Region</span><span>Training</span><span>Ferien</span><span>Kosten</span><span>Total</span></div>'+
+    REGS.slice().sort((a,b)=>regTotal(b)-regTotal(a)).map(r=>'<details class="sct-d"><summary class="sct-r'+(r.now?' now':'')+'"><span><b>'+esc(r.n)+'</b><i>'+esc(r.sub)+'</i></span><span>'+f1(grpAvg(r,'train'))+'</span><span>'+f1(grpAvg(r,'ferien'))+'</span><span>'+f1(grpAvg(r,'kosten'))+'</span><span class="tt">'+f1(regTotal(r))+'</span></summary>'+
+      '<div class="sct-b">'+CRIT.map(G=>'<p class="small"><b>'+G.label+' ('+G.w+' %):</b> '+G.sub.map(([k,l])=>esc(l)+' '+r.sc[k]).join(' · ')+'<br>'+esc(r.why[G.k])+'</p>').join('')+'<div class="srcs">'+srcLinks(r.src)+'</div></div></details>').join('')+
+    '</div></section>';
+  const cmb='<section class="card"><h2>Kombinationen für 12 Nächte</h2><div class="cmbs">'+COMBOS.map(c=>{ const x=comboScore(c); return '<div class="cmb'+(c.rec?' rec':'')+'"><div class="cmb-h"><b>'+esc(c.n)+'</b>'+(c.rec?'<span class="badge rec">Empfehlung</span>':c.now?'<span class="badge">bisher</span>':'')+'<span class="tt">'+f1(x.t)+'</span></div><p class="small muted">Training '+f1(x.g.train)+' · Ferien '+f1(x.g.ferien)+' · Kosten '+f1(x.g.kosten)+'</p><p class="small">'+esc(c.note)+'</p></div>'; }).join('')+'</div>'+
+    '<p class="hint">Rechnerisch liegt «nur Phuket-Nord» knapp vorne. Der Abstand ist kleiner als die Unsicherheit meiner Noten – deine Regel war: nur ändern, wenn etwas klar besser ist. Darum bleibt die Route.</p></section>';
+  const qa='<section class="card"><h2>Die 8 Fragen</h2>'+D.qa.map(x=>'<details class="qa"><summary>'+esc(x.q)+'</summary><div class="qa-b"><p><b>Phuket-Nord:</b> '+esc(x.pn)+'</p><p><b>Khao Lak:</b> '+esc(x.kl)+'</p><div class="srcs">'+srcLinks(x.src)+'</div></div></details>').join('')+'</section>';
+  return top+pm+tbl+cmb+qa;
+}
+
+/* ------------------------------------------------ Ferien: Tagesprogramm A/B/C */
+const FSEG = [['programm','Tagesprogramm'],['ausfluege','Ausflüge']];
+function ferSegHtml(){ return '<div class="seg" style="grid-template-columns:repeat(2,1fr)" role="group" aria-label="Ferien">'+FSEG.map(([k,l])=>'<button data-act="fer-seg" data-v="'+k+'" aria-pressed="'+(S.ferSeg===k)+'">'+l+'</button>').join('')+'</div>'; }
+function choiceOf(iso){ const d=S.docs.tk_choices; const t=d&&d.items&&d.items[iso]; const def=(DAYPROG[iso]||{}).def||'A'; return (t&&t.v)||def; }
+function trainBrief(iso){
+  const d=dayOf(iso)||{}; const ss=(d.sessions||[]).filter(s=>!s.skip && !s.opt && s.min);
+  if(!ss.length) return 'Kein Training geplant';
+  const first=ss.map(s=>s.start).filter(Boolean).sort()[0]||'';
+  const end = (()=>{ const st=ss.filter(s=>s.start).map(s=>{ const [h,m]=s.start.split(':').map(Number); return h*60+m+(+s.min)+(+s.tr||0); }); if(!st.length) return ''; const e=Math.max(...st); return String(Math.floor(e/60)).padStart(2,'0')+':'+String(e%60).padStart(2,'0'); })();
+  return (first?first+' ':'')+ss.map(s=>(SPORTS[s.sport]||SPORTS.kraft).label+' '+hm(s.min)).join(' + ')+(end?' · fertig ca. '+end:'');
+}
+function progOpt(iso, key, letter, chosen){
+  const lbl={A:'Entspannen',B:'Entdecken',C:'Abenteuer'}[letter];
+  if(!key) return '<div class="popt none"><span class="pl">'+letter+'</span><div><b>'+lbl+'</b><p class="small muted">Heute nichts Zusätzliches – Reisetag.</p></div></div>';
+  const P=PROG[key]; const on=chosen===letter;
+  const X=P.x?excOf(P.x):null;
+  const nav = P.g ? gmdir(P.g) : P.q ? gmq(P.q) : '';
+  return '<div class="popt'+(on?' on':'')+'"><button class="pl" data-act="prog-pick" data-day="'+iso+'" data-v="'+letter+'" aria-pressed="'+on+'" aria-label="Variante '+letter+' wählen"'+(canTick()?'':' disabled')+'>'+letter+'</button><div class="pbody"><span class="muted tiny">'+lbl+'</span><b>'+esc(P.t)+'</b>'+
+    '<p class="small">'+esc(P.dur)+' · '+esc(P.cost)+(P.est?EST:'')+'</p><p class="small muted">Anreise: '+esc(P.tr)+' · Essen: '+esc(P.food)+'</p>'+
+    '<div class="fl-act">'+(nav?ext(nav,'Navigation'):'')+(X?'<button class="btn ghost small" data-act="exc-open" data-x="'+X.id+'">Details</button>':'')+(P.book?'<span class="badge pre">Vorab buchen</span>':'')+'</div>'+
+    (P.src&&P.src.length?'<div class="srcs">'+srcLinks(P.src)+'</div>':'')+'</div></div>';
+}
+function vProgramm(){
+  const intro='<section class="card"><h2>So sieht ein Tag aus</h2><div class="tl"><span><b>06:15</b>Training</span><span><b>09:00</b>Frühstück</span><span><b>10:30–16:00</b>Programm</span><span><b>ab 18:30</b>Abendessen</span></div><p class="small muted">Pro Tag drei Varianten – A Entspannen, B Entdecken, C Abenteuer. Antippen wählt; beide könnt ihr wählen.</p></section>';
+  const days=Object.keys(DAYPROG).map(iso=>{ const P=DAYPROG[iso], ch=choiceOf(iso), dt=parseISO(iso), w=blockOf(iso);
+    return '<article class="card pday '+(w==='w2'?'r-w2':'r-w1')+'" id="p-'+iso+'"><div class="pday-h"><span class="wd">'+WD[dt.getUTCDay()]+' '+dt.getUTCDate()+'.'+(dt.getUTCMonth()+1)+'.</span><span class="muted small">'+esc(trainBrief(iso))+'</span></div>'+(P.note?'<p class="small muted">'+esc(P.note)+'</p>':'')+
+      ['A','B','C'].map(L=>progOpt(iso, P[L], L, ch)).join('')+'</article>'; }).join('');
+  return intro+days+'<p class="hint">Kosten mit «Schätzung» sind Annahmen; Fahrzeiten ebenso. Preise mit Quelle stehen in «Ausflüge».</p>';
+}
+function vFerien(){
+  if(S.ferSeg==='ausfluege'){ const h=vExplore(); return h.replace('<div class="view">','<div class="view">'+ferSegHtml()); }
+  return '<div class="view">'+storeBanner()+'<div class="vh"><h1>Ferien</h1><p class="muted small">Tagesprogramm nach dem Training – und alle Ausflüge.</p></div>'+ferSegHtml()+vProgramm()+'</div>';
+}
+
+/* ------------------------------------------------ Kosten */
+function vCosts(){
+  let lo=0, hi=0;
+  const rows=COSTS.map(c=>{ const a=toCHFc(c.lo[0],c.lo[1]), b=toCHFc(c.hi[0],c.hi[1]); lo+=a; hi+=b;
+    return '<div class="crow"><div class="cn"><b>'+esc(c.n)+'</b>'+(c.est?EST:'')+'<p class="small muted">'+esc(c.note)+'</p>'+(c.src?'<div class="srcs">'+srcLinks(c.src)+'</div>':'')+'</div><div class="cv"><b>'+fmtCHF(a)+(Math.round(b)!==Math.round(a)?'–'+fmtCHF(b).replace('CHF ',''):'')+'</b><span class="muted small">'+fmtTHB(a*FXC.thb)+(Math.round(b)!==Math.round(a)?' – '+fmtTHB(b*FXC.thb):'')+'</span></div></div>'; }).join('');
+  return '<div class="vh"><h1>Kostenrahmen</h1><p class="muted small">Für zwei Personen, Richtwerte – keine Buchungsdaten. Kurse: 1 CHF ≈ '+FXC.thb+' THB, 1 € ≈ '+String(FXC.eur).replace('.',',')+' CHF, 1 USD ≈ '+String(FXC.usd).replace('.',',')+' CHF.</p></div>'+
+    '<section class="card costs">'+rows+'<div class="crow total"><div class="cn"><b>Total</b></div><div class="cv"><b>'+fmtCHF(lo)+'–'+fmtCHF(hi).replace('CHF ','')+'</b><span class="muted small">'+fmtTHB(lo*FXC.thb)+' – '+fmtTHB(hi*FXC.thb)+'</span></div></div></section>'+
+    '<p class="hint">Wechselkurse: '+srcLinks(FXC.src)+' – vor der Reise prüfen. Nicht eingerechnet: Anfahrt zum Flughafen, Versicherungen. Einreisebestimmungen vor der Reise prüfen.</p>';
+}
+
+/* ------------------------------------------------ Karte: Tag, Favoriten, Export */
+function dayPtIds(iso){
+  const ids=new Set(); const d=dayOf(iso)||{};
+  (d.sessions||[]).forEach(s=>{ if(s.skip) return; const R=s.route?ROUTE(s.route):null; if(R) R.wp.forEach(w=>{ if(typeof w==='string') ids.add(w); }); const F=s.fac?FACOF(s.fac):null; if(F&&F.pt) ids.add(F.pt); });
+  const P=DAYPROG[iso]; if(P){ const k=P[choiceOf(iso)]; const G=k&&PROG[k]; if(G&&G.x){ const X=excOf(G.x); if(X&&X.pt) ids.add(X.pt); } }
+  const w=blockOf(iso)==='w2'?'w2':'w1'; const ch=chosenHotel(w);
+  if(ch) ids.add(ch); else HOTELS.filter(h=>h.w===w).forEach(h=>ids.add(h.id));
+  if(iso==='2027-02-14'||iso==='2027-02-26') ids.add('hkt');
+  return ids;
+}
+function ptVisible(p){
+  if(MV.fav && !FAVS.has(p.id)) return false;
+  if(MV.day){ if(!MV.dayIds) MV.dayIds=dayPtIds(MV.day); if(!MV.dayIds.has(p.id)) return false; }
+  return true;
+}
+function mapTools(){
+  const days=Object.keys(DAYPROG);
+  return '<div class="mtools"><label class="msel"><span>Tag</span><select data-act-change="map-day"><option value="">Alle Tage</option>'+days.map(iso=>'<option value="'+iso+'"'+(MV.day===iso?' selected':'')+'>'+esc(fmtDay(iso))+'</option>').join('')+'</select></label>'+
+    '<button class="chip" data-act="map-fav" aria-pressed="'+MV.fav+'">★ Favoriten'+(FAVS.size?' ('+FAVS.size+')':'')+'</button>'+
+    (window.__PUBLIC?'<button class="chip" data-act="map-kml">KML</button>':'')+'<button class="chip" data-act="map-csv">CSV</button></div>'+(window.__PUBLIC?'':'<p class="hint" style="margin:-4px 0 0">CSV für Google My Maps. KML und GPX gibt es auf der eigenständigen Webseite.</p>');
+}
+async function dl(name, mime, text){
+  if(!window.__PUBLIC && window.claude && typeof window.claude.use==='function'){
+    let d=null; try{ d=await window.claude.use('downloads'); }catch(e){ d=null; }
+    if(d){ try{ await d.save({filename:name, data:text}); toast('Gespeichert: '+name); }
+      catch(e){ const c=e&&e.code; toast(c==='declined'?'Abgebrochen':c==='rate_limited'?'Bitte kurz warten':'Download hier nicht möglich'); }
+      return; }
+  }
+  try{ const b=new Blob([text],{type:mime}); const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download=name; a.rel='noopener'; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(u); a.remove(); }, 800); toast('Datei erstellt: '+name); }
+  catch(e){ toast('Download hier nicht möglich'); }
+}
+const xe = s => String(s??'').replace(/[<>&'"]/g, c=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[c]));
+function exportPts(){ return MAPPTS.filter(p=>MV.layers[p.L] && ptVisible(p)); }
+function exportKML(){
+  const pts=exportPts(); const by={};
+  pts.forEach(p=>{ (by[p.L]=by[p.L]||[]).push('<Placemark><name>'+xe(p.n)+'</name><description>'+xe([p.s, p.d, 'Lage ungefähr – genaue Position: Google-Maps-Suche «'+(p.q||p.n)+'»'].filter(Boolean).join(' · '))+'</description><Point><coordinates>'+p.lon.toFixed(5)+','+p.lat.toFixed(5)+',0</coordinates></Point></Placemark>'); });
+  const rts=MAPRTS.filter(r=>MV.layers[r.L]).map(r=>'<Folder><name>'+xe(r.n)+' (nur Wegpunkte)</name>'+(r.wp||[]).map(wpc).filter(Boolean).map((w,i)=>'<Placemark><name>'+(i+1)+' · '+xe(w[2]||'')+'</name><Point><coordinates>'+(+w[0]).toFixed(5)+','+(+w[1]).toFixed(5)+',0</coordinates></Point></Placemark>').join('')+'</Folder>').join('');
+  const kml='<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Thailand 2027</name><description>Export vom '+new Date().toISOString().slice(0,10)+'. Positionen ungefähr; Strecken nur als Wegpunkte (keine erfundenen Linien).</description>'+
+    Object.keys(by).map(L=>'<Folder><name>'+xe(LAYERS[L].label)+'</name>'+by[L].join('')+'</Folder>').join('')+(rts?'<Folder><name>Strecken</name>'+rts+'</Folder>':'')+'</Document></kml>';
+  dl('thailand-2027.kml','application/vnd.google-earth.kml+xml',kml);
+}
+function exportCSV(){
+  const q=s=>'"'+String(s??'').replace(/"/g,'""')+'"';
+  const lines=['Name,Kategorie,Suchbegriff,Breite,Laenge,Hinweis'].concat(exportPts().map(p=>[q(p.n),q(LAYERS[p.L].label),q(p.q||p.n),p.lat.toFixed(5),p.lon.toFixed(5),q('Lage ungefähr – in Google My Maps «Suchbegriff» als Ort wählen')].join(',')));
+  dl('thailand-2027.csv','text/csv;charset=utf-8','﻿'+lines.join('\n'));
+}
+function exportGPX(id){
+  const r=MAPRTS.find(x=>x.id===id); if(!r) return;
+  const w=(r.wp||[]).map(wpc).filter(Boolean);
+  const gpx='<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Thailand 2027" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>'+xe(r.n)+'</name><desc>Nur Wegpunkte, kein Track. Lage ungefähr. Echten Track bei der Quelle holen.</desc></metadata>'+
+    w.map((p,i)=>'<wpt lat="'+(+p[1]).toFixed(5)+'" lon="'+(+p[0]).toFixed(5)+'"><name>'+(i+1)+' '+xe(p[2]||'')+'</name></wpt>').join('')+'</gpx>';
+  dl(r.id+'-wegpunkte.gpx','application/gpx+xml',gpx);
+}
+
+/* ------------------------------------------------ Aktionen */
+Object.assign(EXT_ACT, {
+  'tr-seg': el => { S.trSeg=el.dataset.v; history.replaceState(null,'','#training'+(S.trSeg==='plan'?'':'-'+S.trSeg)); render(); window.scrollTo(0,0); },
+  'fer-seg': el => { S.ferSeg=el.dataset.v; history.replaceState(null,'','#entdecken'+(S.ferSeg==='programm'?'':'-'+S.ferSeg)); render(); window.scrollTo(0,0); },
+  'tr-open': el => openSess(el.dataset.day, el.dataset.sid),
+  'tr-done': async el => { const iso=el.dataset.day, sid=el.dataset.sid; const d=dayOf(iso); const s=d&&(d.sessions||[]).find(x=>x.id===sid); if(!s) return; const t=tickOf('days', iso+'|'+sid, s); closeSheet(true); await setTick('days', iso+'|'+sid, !t.done); },
+  'tr-skip': async el => { const iso=el.dataset.day, sid=el.dataset.sid; const A=clean(dayOf(iso)||{}); const s=(A.sessions||[]).find(x=>x.id===sid); if(!s) return; s.skip=!s.skip; closeSheet(true); const ok=await planPatch({[iso]:Object.assign(A, stamp())}); if(ok) toast(s.skip?'Ausgelassen':'Wieder im Plan'); },
+  'tr-move': async el => { const t=$('#mv-day')?.value; if(!t) return; closeSheet(true); await trMove(el.dataset.day, el.dataset.sid, t); },
+  'tr-swap': async el => { const o=$('#sw-sess')?.value; if(!o) return; closeSheet(true); await trSwap(el.dataset.day, el.dataset.sid, o); },
+  'tr-route': el => { closeSheet(true); S.trSeg='strecken'; location.hash='training-strecken'; render(); setTimeout(()=>document.getElementById('tr-'+el.dataset.id)?.scrollIntoView({block:'start'}), 60); },
+  'tr-fac': el => { closeSheet(true); S.trSeg='orte'; location.hash='training-orte'; render(); setTimeout(()=>document.getElementById('fac-'+el.dataset.id)?.scrollIntoView({block:'start'}), 60); },
+  'tr-reset': () => { try{ const L=JSON.parse(localStorage.getItem('th27-local-v1')||'{}'); delete L['trip/days']; localStorage.setItem('th27-local-v1', JSON.stringify(L)); }catch(e){} location.reload(); },
+  'prog-pick': async el => { await patch('tk_choices', {items:{[el.dataset.day]:{v:el.dataset.v, by:S.me||'', at:new Date().toISOString()}}}); MV.dayIds=null; },
+  'gpx-wp': el => exportGPX(el.dataset.id),
+  'map-fav': el => { MV.fav=!MV.fav; el.setAttribute('aria-pressed', String(MV.fav)); mapDraw(); mapList(); },
+  'map-kml': () => exportKML(),
+  'map-csv': () => exportCSV(),
+  'fav-toggle': el => { const id=el.dataset.pt; if(FAVS.has(id)) FAVS.delete(id); else FAVS.add(id); saveFavs(); mapInfo(); mapDraw(); const b=$('[data-act="map-fav"]'); if(b) b.textContent='★ Favoriten'+(FAVS.size?' ('+FAVS.size+')':''); },
+  'map-gpx': el => exportGPX(el.dataset.rt)
+});
+document.addEventListener('change', e => {
+  const el=e.target.closest('[data-act-change="map-day"]'); if(!el) return;
+  MV.day=el.value; MV.dayIds=null; if(MV.sel && MV.sel.t==='p'){ const p=ptOf(MV.sel.id); if(p && !ptVisible(p)){ MV.sel=null; mapInfo(); } }
+  if(MV.day){ const ids=[...dayPtIds(MV.day)].map(ptOf).filter(Boolean); if(ids.length){ let b=[180,90,-180,-90]; ids.forEach(p=>{ b=[Math.min(b[0],p.lon),Math.min(b[1],p.lat),Math.max(b[2],p.lon),Math.max(b[3],p.lat)]; }); const m=0.01; mapFit([b[0]-m,b[1]-m,b[2]+m,b[3]+m], true, 30); } }
+  mapDraw(); mapList();
+});
+EXT_VIEWS.training = vTraining;
+EXT_VIEWS.entdecken = vFerien;
+EXT_VIEWS.uebersicht = function(){
+  const h=vOverview(); const t=blockSum('w1'), u=blockSum('w2');
+  const card='<a class="card navcard" href="#training-standort"><span class="badge rec">Neu</span><b>Standort geprüft: Route bleibt</b><span class="muted small">Phuket-Nord fürs Training, Khao Lak für die Ferien · Empfehlung 7 + 5 Nächte</span></a>'+
+    '<a class="card navcard" href="#training"><b>Trainingslager</b><span class="muted small">Block 1: '+hm(t.main)+' · Block 2: '+hm(u.main)+' · plus optionale Einheiten</span></a>';
+  return h.replace('<div class="view">','<div class="view">'+card);
+};
 
 /* ================================================================ Sheets */
 let SHEET=null;
@@ -2411,7 +3250,7 @@ document.addEventListener('change', async e => {
 });
 
 /* ================================================================ Start */
-function readHash(){ const h=(location.hash||'').slice(1); if(h.indexOf('infos-')===0){ const r=h.slice(6); if(INFO[r]) S.infoRegion=r; return 'infos'; } if(h==='listen') return S.lastList||'packliste'; if(h.indexOf('buchungen-')===0){ const b=h.slice(10); if(BSEG.some(x=>x[0]===b)) S.bookSeg=b; return 'buchungen'; } return VIEWS.includes(h)?h:'uebersicht'; }
+function readHash(){ const h=(location.hash||'').slice(1); if(h.indexOf('infos-')===0){ const r=h.slice(6); if(INFO[r]) S.infoRegion=r; return 'infos'; } if(h==='listen') return S.lastList||'packliste'; if(h.indexOf('training')===0){ const b=h.slice(9); S.trSeg=TSEG.some(x=>x[0]===b)?b:'plan'; return 'training'; } if(h.indexOf('entdecken-')===0){ const b=h.slice(10); if(FSEG.some(x=>x[0]===b)) S.ferSeg=b; return 'entdecken'; } if(h.indexOf('buchungen-')===0){ const b=h.slice(10); if(BSEG.some(x=>x[0]===b)) S.bookSeg=b; return 'buchungen'; } return VIEWS.includes(h)?h:'uebersicht'; }
 function applyRoute(){ S.view=readHash(); const target=S.scrollTo; S.scrollTo=null; if(SHEET) closeSheet(false); render(); if(target && S.view==='tage'){ requestAnimationFrame(()=>{ const el=document.getElementById('d-'+target); if(el) el.scrollIntoView({block:'start'}); }); } else window.scrollTo(0,0); }
 window.addEventListener('hashchange', applyRoute);
 function start(data){

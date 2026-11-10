@@ -11,7 +11,7 @@ Tickets oder Kosten hier ablegen. Der Zugangscode beim Öffnen ist nur ein Sicht
 2. Teilen-Symbol → «Zum Home-Bildschirm».
 3. Danach startet sie wie eine App und funktioniert auch offline.
 
-Häkchen in Pack- und Checkliste und bei den Trainings bleiben nur auf dem jeweiligen Gerät gespeichert.
+Häkchen, die Wahl im Tagesprogramm und Änderungen am Trainingsplan (verschieben, tauschen, auslassen) bleiben nur auf dem jeweiligen Gerät gespeichert. Positionen auf der Karte sind ungefähr; Strecken erscheinen nur als Wegpunkte.
 
 ## Aktualisieren
 Die gemeinsame, bearbeitbare Version ist die Claude-Seite. Änderungen von dort kommen mit einem neuen Export hierher.
